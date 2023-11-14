@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<!--head-->
+<head th:replace="/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/header.html :: header"></div>
+<!--sub_back-->
+<div th:replace="/sub_back.html :: sub_back"></div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>뉴스글 작성</strong><div class="bottom_border"></div></div>
+        <div class="board_con">
+            <div class="board_write">
+                <dl>
+                    <dd>
+                        <ul>작성자
+                            <li><input type="text" class="tiny_text" value="작성자 이름"></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <ul>제목
+                            <li><input type="text" placeholder="제목을 입력해주세요."></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <ul>내용
+                            <li><textarea placeholder="내용을 입력해주세요."></textarea></li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <ul>사진
+                            <li><input type="file"></li>
+                        </ul>
+                    </dd>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--하단 footer-->
+<div th:replace="/footer.html :: footer"></div>
+</body>
+</html>

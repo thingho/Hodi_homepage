@@ -1,0 +1,145 @@
+@charset "UTF-8"; 
+
+@media (max-width: 1200px) {
+	.navContainer{
+		width: 850px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.navigation{
+		width: 850px !important;
+	}
+	.navigation>ul>li{
+		width: 200px !important;
+		min-width: 200px !important;
+	}
+	.sub_title .sub_wrap{
+		width: 850px;
+	}
+	.sub_back{
+		width: 850px;
+		min-width: 100%;
+	}
+	.sub_back1{
+		width: 850px;
+		min-width: 100%;
+	}
+	.sub_back2{
+		width: 850px;
+		min-width: 100%;
+	}
+	.sub_back3{
+		width: 850px;
+		min-width: 100%;
+	}
+	.sub_title{
+		width: 850px;
+	}
+	.content_main{
+		width: 850px;
+	}
+	
+	.histList .textList li .mark{
+		left: -50px;
+	}
+	.konzession_area ul li{
+		width: 33%;	
+	}
+	.konzession_area ul li:not(:last-child){
+		margin-right: 0;
+	}
+	.con_area .left_area{
+		width: 100%;
+		display: inline-block;
+	}
+	.con_area .right_area{
+		width: 100%;
+		display: inline;
+	}
+
+
+	.topmenu_deptitle{
+		width: 100%;
+	}
+	.topmenu_deptitle>ul{
+		width: 850px;
+	}
+	.inlineMenu>ul li{
+		width: 270px;
+	}
+	.main_wrap .content .content_synopsis{
+		width: 850px;
+	}
+
+	.footer_wrap{
+		width: 850px;
+	}
+	
+}
+
+@media (max-width: 850px){
+	html{
+		min-width: 100%;
+	}
+	body {
+		-webkit-transition: margin-left 0.5s ease;
+		-moz-transition: margin-left 0.5s ease;
+		-o-transition: margin-left 0.5s ease;
+		-ms-transition: margin-left 0.5s ease;
+		transition: margin-left 0.5s ease;
+	}
+	img {
+		/*max-width: 100% !important;*/
+	}
+	.header{
+	}
+	.sub_title .sub_wrap{
+		width: 100%;
+	}
+	.sub_back{
+		width: 100%;
+		min-width: 100%;
+	}
+	.sub_back1{
+		width: 100%;
+		min-width: 100%;
+	}
+	.sub_back2{
+		width: 100%;
+		min-width: 100%;
+	}
+	.sub_back3{
+		width: 100%;
+		min-width: 100%;
+	}
+	.sub_title{
+		width: 100%;
+	}
+	.content_main{
+		width: 100%;
+	}
+	.topmenu_deptitle{
+		width: 100%;
+	}
+	.main_wrap .content .content_synopsis{
+		width: 100%;
+	}
+
+	.footer_wrap{
+		width: 100%;
+	}
+	.navigation>ul>li{
+		min-width: 20% !important;
+	}
+	.img_slide{
+		width: 100%;
+	}
+
+	#layer1{
+		display: none !important;
+	}
+	#layer2{
+		display: none !important;
+	}
+}
