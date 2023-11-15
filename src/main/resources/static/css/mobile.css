@@ -1,6 +1,6 @@
 @charset "UTF-8"; 
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 	.navContainer{
 		width: 850px;
 		-webkit-box-sizing: border-box;
@@ -78,7 +78,7 @@
 	
 }
 
-@media (max-width: 850px){
+@media screen and (max-width: 850px){
 	html{
 		min-width: 100%;
 	}

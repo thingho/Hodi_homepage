@@ -1043,7 +1043,7 @@ table.info tr td{
 .board_con .board_list ul li a dl dt:hover{
 	color:#2c7cdd;
 }
-/**/
+/*자세히 보기*/
 .board_con .board_list ul li .btn_area:hover{
 	color:#2c7cdd;
 }
@@ -1055,10 +1055,25 @@ table.info tr td{
 .board_con .board_write{
 	border-top:2px solid black;
 }
-.board_con .board_write dl dd{
+.board_con .board_write dl dd, .board_con .board_write dl dt{
 	border-bottom:1px solid #eee;
 	padding: 25px 20px;
 }
+
+/*글쓰기 부분*/
+.board_con .board_write dl dt{
+	font-size:16pt;
+	font-weight: bold;
+}
+.board_con .board_write dl dt a{
+	margin-left: 40px;
+	cursor: pointer;
+}
+.board_con .board_write dl dt a:hover{
+	color:#2c7cdd;
+}
+/**/
+
 .board_con .board_write dl dd ul li{
 	display: inline-block;
 	vertical-align: middle;
@@ -1102,15 +1117,16 @@ table.info tr td{
 	font-size:16pt;
 	font-weight: bold;
 }
-/**/
+/*목록 버튼*/
 .board_con .board_view dl dt a:hover{
 	color:#2c7cdd;
 }
-/**/
+/*view 이미지 크기*/
 .board_con .board_view dl dd img{
 	width: 1100px;
 	height: 850px;
 }
+/**/
 
 .board_con .board_view dl dd.con_img{
 	border:none;
@@ -1277,4 +1293,40 @@ table.info tr td{
 .right_footer li a, .right_footer li a:hover{
 	color:white;
 	text-decoration:none;
+}
+
+/*새로 설정*/
+.login{
+	width: 100%;
+	border:1px solid #bbb;
+	background-color:#eee;
+	padding: 30px;
+	text-align: center;
+}
+.login .search_text{
+	padding-top: 10px;
+	font-size:13pt;
+	float: left;
+}
+.login .search_text span:first-child{
+	font-weight: bold;
+	color:#0053a5
+}
+
+.login .login_form{
+	border:none;
+}
+.login .login_form input[type=text],input[type=password]{
+	font-size: 18px;
+	padding: 12.5px 20px;
+	width: 220px;
+	vertical-align: top;
+	border:1px solid #aaa;
+}
+.login .login_form button[type=submit]{
+	font-size: 18px;
+	padding: 12.5px 20px;
+	width: 220px;
+	vertical-align: top;
+	border:1px solid #aaa;
 }

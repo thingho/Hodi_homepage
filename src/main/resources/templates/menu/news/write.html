@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <!--head-->
 <head th:replace="/head.html :: head"></head>
 <body>
@@ -12,29 +12,35 @@
         <div class="content_title"><strong>뉴스글 작성</strong><div class="bottom_border"></div></div>
         <div class="board_con">
             <div class="board_write">
-                <dl>
-                    <dd>
-                        <ul>작성자
-                            <li><input type="text" class="tiny_text" value="작성자 이름"></li>
-                        </ul>
-                    </dd>
-                    <dd>
-                        <ul>제목
-                            <li><input type="text" placeholder="제목을 입력해주세요."></li>
-                        </ul>
-                    </dd>
-                    <dd>
-                        <ul>내용
-                            <li><textarea placeholder="내용을 입력해주세요."></textarea></li>
-                        </ul>
-                    </dd>
-                    <dd>
-                        <ul>사진
-                            <li><input type="file"></li>
-                        </ul>
-                    </dd>
-                    <dd></dd>
-                </dl>
+                <form action="/menu/news/write" name="writeFrm" method="post" enctype="multipart/form-data">
+                    <dl>
+                        <dd>
+                            <ul>작성자
+                                <li>관리자<input type="hidden" name="name" class="tiny_text" value="관리자"></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>제목
+                                <li><input type="text" name="btitle" placeholder="제목을 입력해주세요."></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>내용
+                                <li><textarea name="bcontent" placeholder="내용을 입력해주세요."></textarea></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>사진
+                                <li><input type="file" name="file"></li>
+                            </ul>
+                        </dd>
+                        <!--sub.css 1064~1073번 hover 색깔 추가-->
+                        <dt>
+                            <a onclick="writeBtn()">작성</a>
+                            <a onclick="location.href='../news/list'">취소</a>
+                        </dt>
+                    </dl>
+                </form>
             </div>
         </div>
     </div>
@@ -42,5 +48,31 @@
 
 <!--하단 footer-->
 <div th:replace="/footer.html :: footer"></div>
+<script>
+    function writeBtn(){
+        if ($("#name").val() == ""){
+            alert("이름을 입력해주세요.");
+            $("#name").focus();
+            return false;
+        }
+        if ($("#btitle").val() == ""){
+            alert("제목을 입력해주세요.");
+            $("#btitle").focus();
+            return false;
+        }
+        if ($("#bcontent").val() == ""){
+            alert("내용을 입력해주세요.");
+            $("#bcontent").focus();
+            return false;
+        }
+        var conf = confirm("뉴스글을 작성하시겠습니까?");
+        if(conf){
+            alert("뉴스글 작성이 완료되었습니다.");
+            writeFrm.submit();
+        }else{
+            return false;
+        }
+    }
+</script>
 </body>
 </html>

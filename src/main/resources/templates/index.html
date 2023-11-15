@@ -1,10 +1,243 @@
 <!DOCTYPE html>
 <html html lang="ko" xmlns:th="http://www.thymeleaf.org/">
-    <head>
-        <meta charset="UTF-8">
-        <title>HODI</title>
-    </head>
-    <body>
-        <h2><a href="/menu/news/list">HODI 페이지</a></h2>
-    </body>
+<div id="layer1" class="pop-layer">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <!--content //-->
+            <img src="./image/main/final.jpg" alt="">
+
+            <div class="btn-r">
+                <a href="#" class="btn-layerClose tClose" onclick="closePopT('Notice1','layer1');">오늘 하루 보지 않기</a>
+                <a href="#" class="btn-layerClose iClose" onclick="closePop('layer1');">닫기</a>
+            </div>
+            <!--// content-->
+        </div>
+    </div>
+</div>
+<div id="layer2" class="pop-layer">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <!--content //-->
+            <img src="./popup/openpop.gif" alt="">
+
+            <div class="btn-r">
+                <a href="#" class="btn-layerClose tClose" onclick="closePopT('Notice','layer2');">오늘 하루 보지 않기</a>
+                <a href="#" class="btn-layerClose iClose" onclick="closePop('layer2');">닫기</a>
+            </div>
+            <!--// content-->
+        </div>
+    </div>
+</div>
+<!--head-->
+<head th:replace="/main_head.html :: main_head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/header.html :: header"></div>
+
+<div id="fullpage">
+    <div class="section" id="section0">
+
+        <div class="slide" id="slide2">
+            <h2 >HEART OF DIGITAL INFORMATION</h2>
+            <h1>지속가능한 미래를 향한 가치를 창조하는 기업</h1>
+            <ul class="subtext">
+                <li>호디는 끊임없는 창의적인 도전정신으로</li>
+                <li>미래를 향하여 발돋음하는 사람들이 함께 합니다.</li>
+            </ul>
+        </div>
+        <div class="slide" id="slide3">
+            <h2>HEART OF DIGITAL INFORMATION</h2>
+            <h1>차별화된 기술력과 창조적인 사고로 더 큰 도약을 꿈꾸는 기업</h1>
+            <ul class="subtext">
+                <li>호디는 끊임없는 창의적인 도전정신으로</li>
+                <li>미래를 향하여 발돋음하는 사람들이 함께 합니다.</li>
+            </ul>
+        </div>
+        <div class="slide" id="slide4">
+            <h2>HEART OF DIGITAL INFORMATION</h2>
+            <h1>세계적인 기술을 자랑하는 글로벌 엔진 빌더</h1>
+            <ul class="subtext">
+                <li>호디는 끊임없는 창의적인 도전정신으로</li>
+                <li>미래를 향하여 발돋음하는 사람들이 함께 합니다.</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide5">
+            <h2>HEART OF DIGITAL INFORMATION</h2>
+            <h1>미래를 위한 에너지전략 솔루션기업</h1>
+            <ul class="subtext">
+                <li>호디는 끊임없는 창의적인 도전정신으로</li>
+                <li>미래를 향하여 발돋음하는 사람들이 함께 합니다.</li>
+            </ul>
+        </div>
+        <div class="slide" id="slide1">
+            <h2>HEART OF DIGITAL INFORMATION</h2>
+            <h1>최고의 기술과 최상의 품질로 보답하는 기업</h1>
+            <ul class="subtext">
+                <li>호디는 끊임없는 창의적인 도전정신으로</li>
+                <li>미래를 향하여 발돋음하는 사람들이 함께 합니다.</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="section" id="section1">
+        <div class="section_background" >
+
+            <div class="left_section">
+                <div class="section_text" id="text_left">
+                    <ul>
+                        <li class="main_title">도서관사업</li>
+                        <li class="sub_title">LIBRARY BUSINESS</li>
+                    </ul>
+                </div>
+                <div class="section_img">
+                    <div><img src="./image/main/main2depth_01.gif" alt="도서관솔루션" onclick="javascript:location.href='./menu/sub02/sub1_1.php';"></div>
+                    <div><img src="./image/main/main2depth_02.gif" alt="모바일솔루션" onclick="javascript:location.href='./menu/sub02/sub2_1.php';"></div>
+                    <div><img src="./image/main/main2depth_03.gif" alt="무인시스템" onclick="javascript:location.href='./menu/sub02/sub3_1.php';"></div>
+                    <div><img src="./image/main/main2depth_04.gif" alt="보안솔루션" onclick="javascript:location.href='./menu/sub02/sub4_1.php';"></div>
+                </div>
+            </div>
+
+            <div class="right_section">
+                <div class="section_text" id="text_right">
+                    <ul>
+                        <li class="main_title">전력사업</li>
+                        <li class="sub_title">ELECTRIC BUSINESS</li>
+                    </ul>
+                </div>
+                <div class="section_img">
+                    <div><img src="./image/main/main2depth_05.gif" alt="전력수요분석시스템" onclick="javascript:location.href='./menu/sub03/sub1_1.php';"></div>
+                    <div><img src="./image/main/main2depth_06.gif" alt="전력수요예측시스템" onclick="javascript:location.href='./menu/sub03/sub2_1.php';"></div>
+                    <div><img src="./image/main/main2depth_07.gif" alt="FastDR(고속수요반응)" onclick="javascript:location.href='./menu/sub03/sub3_1.php';"></div>
+                    <div><img src="./image/main/main2depth_08.gif" alt="빌딩에너지관리시스템" onclick="javascript:location.href='./menu/sub03/sub4_1.php';"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="section inc_info" id="section2">
+        <h1>도서관솔루션</h1>
+        <ul class="subtext">
+            <li>LIBRARY SOLUTION</li>
+        </ul>
+        <div class="section_content" id="library_solution">
+            <ul>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_1.php';">열람실좌석<br>관리시스템<h5>SeatMate</h5><img src="./image/main/lib_01.png" alt="SeatMate"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_2.php';">디지털자료실<br>관리시스템<h5>LibMate</h5><img src="./image/main/lib_02.png" alt="LibMate"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_5.php';">실시간회원증<br>발급시스템<h5>ICMaker</h5><img src="./image/main/lib_04.png" alt="ICMake"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_4.php';">영상정보<br>디스플레이<h5>eScreen</h5><img src="./image/main/lib_11.png" alt="eScreen"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_1.php';">출입관리<br>분석시스템<h5>SpeedGate</h5><img src="./image/main/lib_03.png" alt="SpeedGate"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_2.php';">디지털전자신문<br>열람서비스<h5>GoodNews</h5><img src="./image/main/lib_06.png" alt="GoodNews"></li>
+                <li onclick="javascript:location.href='./menu/sub02/sub1_5.php';">강좌관리시스템<br>&nbsp;<h5>TotalManager</h5><img src="./image/main/lib_09.png" alt="ICMake"></li>
+            </ul>
+        </div>
+        <div class="content_btn">
+            <div class="left_btn"> </div>
+            <div class="right_btn"> </div>
+        </div>
+    </div>
+    <div class="section inc_info" id="section3">
+        <h1>전력솔루션</h1>
+        <ul class="subtext">
+            <li>ELECTRIC SOLUTION</li>
+        </ul>
+        <div class="section_content">
+            <ul>
+                <li onclick="javascript:location.href='./menu/sub03/sub1_1.php';">전력수요분석시스템<h5>ELECTRIC POWER BUSINESS</h5><img src="./image/main/elec_01.png" alt="전력수요분석시스템"></li>
+                <li onclick="javascript:location.href='./menu/sub03/sub2_1.php';">전력수요예측시스템<h5>ELECTRIC POWER BUSINESS</h5><img src="./image/main/elec_02.png" alt="전력수요예측시스템"></li>
+                <li onclick="javascript:location.href='./menu/sub03/sub3_1.php';">Fast DR(고속수요반응)<h5>Fast DR</h5><img src="./image/main/elec_03.png" alt="Fast DR"></li>
+                <li onclick="javascript:location.href='./menu/sub03/sub4_1.php';">빌딩에너지관리시스템<h5>BUILDING ENERGY SYSTEM</h5><img src="./image/main/elec_04.png" alt="BUILDING ENERGY SYSTEM"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section inc_info" id="section4">
+        <h1>공지사항</h1>
+        <ul class="subtext">
+            <li>NOTICE</li>
+        </ul>
+        <div class="section_content" style="text-align: center;">
+            <ul>
+                <li onclick="javascript:location.href='./menu/news/list';">뉴스소식<h5>NEWS</h5><img src="./image/main/notice_01.png" alt="뉴스소식"></li>
+                <li onclick="javascript:location.href='./menu/news/write';">뉴스글 작성<h5>WRITE</h5><img src="./image/main/notice_02.png" alt="뉴스글 작성"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section fp-auto-height" id="section5">
+        <!--하단 footer-->
+        <div th:replace="/footer.html :: footer"></div>
+    </div>
+</div>
+<a value=" " class="top_button"> </a>
+
+<script type="text/javascript" src="./fullPage/fullpage.js"></script>
+
+<script type="text/javascript">
+    $ (document) .ready (function () {
+        $ ( '#fullpage'). fullpage ({
+            anchors: ['HOME', 'BUSINESS', 'LIBRARY','ELECTRIC','NOTICE','INFO'],
+            navigation:true,
+            navigationTooltips: ['HOME', 'BUSINESS', 'LIBRARY','ELECTRIC','NOTICE','INFO'],
+            verticalCentered: false,
+            slidesNavigation:true,
+            sectionsColor : [ '# 1bbc9b', '# 4BBFC3'],
+            loopBottom : true,
+            showActiveTooltip:true,
+            continuousHorizontal:true,
+            resetSliders:true,
+            menu: '#menu',
+            afterRender : function () {
+                setInterval (function ( ) {
+                    $ .fn.fullpage.moveSlideRight ();
+                }, 8000);
+            },
+            onLeave: function (index, direction) {
+                //after leaving section 1 (home) and going anywhere else, whether scrolling down to next section or clicking a nav link, this SHOULD stop the slideshow and allow you to navigate the site...but it does not
+                if (index == '1') {
+                    console.log('on leaving the slideshow/section1');
+                    clearInterval(slideTimeout);
+                }
+            }
+        });
+
+        $(".left_btn").click(function(){
+            if($("#library_solution > ul").is(":animated") == false){
+                $("#library_solution > ul").css("left","0");
+                $("#library_solution > ul").animate(
+                    {
+                        "left":"-283.5px"
+                    },
+                    400,
+                    "easeOutExpo",
+                    function(){
+                        $("#library_solution > ul").append($("#library_solution > ul li:first"));
+                        $("#library_solution > ul").css("left","0");
+                    }
+                );
+            }
+        });
+
+        $(".right_btn").click(function(){
+            if($("#library_solution > ul").is(":animated") == false){
+                $("#library_solution > ul").prepend($("#library_solution > ul li:last"));
+                $("#library_solution > ul").css("left","-280px");
+                $("#library_solution > ul").animate(
+                    {
+                        "left":"0"
+                    },
+                    400,
+                    "easeOutExpo",
+                    function(){
+                    }
+                );
+            }
+        });
+        $(".top_button").click(function(){
+            $("#fullpage").fullpage.moveTo(1);
+        });
+
+    });
+
+</script>
+
+</body>
 </html>

@@ -10,4 +10,9 @@ public class FController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 }

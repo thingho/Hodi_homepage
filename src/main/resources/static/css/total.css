@@ -78,6 +78,12 @@ a:link, a:visited, a:active{
 	margin-top: 15px;
 	z-index: 999;
 }
+.header .login {
+	margin-right: 40px;
+	margin-top: 15px;
+	z-index: 999;
+}
+
 .header .logo div{
 	width: 400px;
 	position: fixed;
@@ -233,7 +239,7 @@ a:link, a:visited, a:active{
 }
 
 
-@media (max-width: 1280px) {
+@media screen and(max-width: 1280px) {
 	.logo{
 	}
 	.navContainer{
