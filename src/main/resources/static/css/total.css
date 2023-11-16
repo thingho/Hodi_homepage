@@ -78,9 +78,9 @@ a:link, a:visited, a:active{
 	margin-top: 15px;
 	z-index: 999;
 }
-.header .login {
-	margin-right: 40px;
-	margin-top: 15px;
+.header .login_logo {
+	margin-left: 1850px;
+	margin-top: 25px;
 	z-index: 999;
 }
 
@@ -91,12 +91,29 @@ a:link, a:visited, a:active{
 	left: 265px;
 	font-size:1.1em
 }
+.header .login_logo div{
+	width: 400px;
+	position: fixed;
+	top: 30px;
+	right: 265px;
+	font-size:1.1em
+}
+
 .header .logo img{
 	z-index: 999;
 }
 
+.header .login_logo img{
+	z-index: 999;
+}
 
 .logo {
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+.login_logo {
 	position: absolute;
 	left: 0;
 	z-index: 1;

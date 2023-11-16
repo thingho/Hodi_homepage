@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<script>
+    function logoutBtn(){
+        alert("로그아웃이 되었습니다.");
+        location.href="../logout";
+    }
+</script>
 <div th:fragment="header" class="header">
     <a href="../../index" class="logo">
         <img src="../..//image/logo.gif" alt="HODI">
     </a>
-    <!--<a href="../../index" class="login">
-        <img src="../..//image/logo.gif" alt="HODI">
-    </a>-->
+    <a th:if="${session.sessionId == null}" href="../../login" class="login_logo">
+        <img src="../..//image/login.png" alt="login">
+    </a>
+    <a th:if="${session.sessionId != null}" href="../../admin/adminindex" class="login_logo">
+        <img src="../..//image/logout.png" alt="logout">
+    </a>
     <div class="navContainer transform">
         <div class="borderline"></div>
         <div class="navigation">
@@ -43,8 +52,6 @@
                     <a href="#">공지사항</a>
                     <ul>
                         <li><a href="../../menu/news/list">뉴스소식</a></li>
-                        <li><a href="../../menu/news/write">뉴스글 작성</a></li>
-                        <li><a href="../../login">로그인</a></li>
                     </ul>
                 </li>
                 <!-- <li class="navToggle">

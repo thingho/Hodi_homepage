@@ -1296,6 +1296,28 @@ table.info tr td{
 }
 
 /*새로 설정*/
+.main_wrap .content .login_title{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	text-align: center;
+	font-size:25pt;
+	height: 45px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+}
+.main_wrap .content .login_title .bottom_border{
+	position: absolute;
+	width: 40px;
+	height: 1px;
+	border-bottom:2px solid black;
+	margin: 0 auto;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .login{
 	width: 100%;
 	border:1px solid #bbb;
@@ -1303,30 +1325,27 @@ table.info tr td{
 	padding: 30px;
 	text-align: center;
 }
-.login .search_text{
-	padding-top: 10px;
-	font-size:13pt;
-	float: left;
-}
-.login .search_text span:first-child{
-	font-weight: bold;
-	color:#0053a5
-}
 
 .login .login_form{
 	border:none;
+	text-align: center;
 }
 .login .login_form input[type=text],input[type=password]{
 	font-size: 18px;
-	padding: 12.5px 20px;
-	width: 220px;
-	vertical-align: top;
+	padding: 10px 15px;
+	margin: 10px 15px;
+	width: 300px;
+	height: 50px;
 	border:1px solid #aaa;
 }
-.login .login_form button[type=submit]{
+.login .login_form button[type=submit],button[type=button]{
 	font-size: 18px;
-	padding: 12.5px 20px;
+	font-weight: bold;
+	padding: 15px 20px;
 	width: 220px;
-	vertical-align: top;
 	border:1px solid #aaa;
+	cursor: pointer;
+}
+.login .login_form button[type=submit]:hover,button[type=button]:hover{
+	color:#0053a5
 }

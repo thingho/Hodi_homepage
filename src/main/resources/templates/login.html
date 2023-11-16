@@ -9,17 +9,16 @@
 <div th:replace="/sub_back.html :: sub_back"></div>
 <div class="main_wrap">
     <div class="content">
-        <div class="content_title"><strong>관리자 로그인</strong><div class="bottom_border"></div></div>
+        <div class="login_title"><strong>로그인</strong><div class="bottom_border"></div></div>
         <div class="board_con">
             <!--sub.css 1299번 부터 로그인 부분 수정-->
             <div class="login">
                 <fieldset class="login_form">
-                    <form action="">
-                        <label>아이디</label>
-                        <input type="text" name="id"><br>
-                        <label>패스워드</label>
-                        <input type="password" name="pw"><br><br>
+                    <form action="../login" method="post" name="loginFrm">
+                        <input type="text" name="id" placeholder="아이디"><br>
+                        <input type="password" name="pw" placeholder="비밀번호"><br><br>
                         <button type="submit" onclick="loginBtn()">로그인</button>
+                        <button type="button" onclick="cancleBtn()">취소</button>
                     </form>
                 </fieldset>
             </div>
@@ -28,6 +27,17 @@
 </div>
 <script>
     AOS.init();
+</script>
+<script>
+    function loginBtn(){
+        if("[[${loginCheck}]]" == "fail"){
+            alert("아이디 또는 패스워드가 틀리거나 등록되어 있지 않습니다.");
+        }
+        loginFrm.submit();
+    }
+    function cancleBtn(){
+        location.href="../index"
+    }
 </script>
 <!--하단 footer-->
 <div th:replace="/footer.html :: footer"></div>

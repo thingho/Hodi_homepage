@@ -1,4 +1,4 @@
-package com.java.hodipg;
+package com.java.hodipg.dto;
 
 import lombok.Data;
 

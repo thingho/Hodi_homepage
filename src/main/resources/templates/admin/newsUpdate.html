@@ -9,14 +9,14 @@
 <div th:replace="/sub_back.html :: sub_back"></div>
 <div class="main_wrap">
     <div class="content">
-        <div class="content_title"><strong>뉴스글 작성</strong><div class="bottom_border"></div></div>
+        <div class="content_title"><strong>뉴스글 수정</strong><div class="bottom_border"></div></div>
         <div class="board_con">
             <div class="board_write">
-                <form action="/menu/news/write" name="writeFrm" method="post" enctype="multipart/form-data">
+                <form action="/admin/newsUpdate" name="updateFrm" method="post" enctype="multipart/form-data">
                     <dl>
                         <dd>
                             <ul>작성자
-                                <li>관리자<input type="hidden" name="name" class="tiny_text" value="관리자"></li>
+                                <li><input type="hidden" name="name" class="tiny_text" th:value="${session.sessionName}" th:text="${session.sessionName}"></li>
                             </ul>
                         </dd>
                         <dd>
@@ -36,8 +36,8 @@
                         </dd>
                         <!--sub.css 1064~1073번 hover 색깔 추가-->
                         <dt>
-                            <a onclick="writeBtn()">작성</a>
-                            <a onclick="location.href='../news/list'">취소</a>
+                            <a onclick="updateBtn()">수정</a>
+                            <a onclick="location.href='../../admin/adminindex'">취소</a>
                         </dt>
                     </dl>
                 </form>
@@ -49,7 +49,7 @@
 <!--하단 footer-->
 <div th:replace="/footer.html :: footer"></div>
 <script>
-    function writeBtn(){
+    function updateBtn(){
         if ($("#name").val() == ""){
             alert("이름을 입력해주세요.");
             $("#name").focus();
@@ -65,9 +65,9 @@
             $("#bcontent").focus();
             return false;
         }
-        var conf = confirm("뉴스글을 작성하시겠습니까?");
+        var conf = confirm("뉴스글을 수정하시겠습니까?");
         if(conf){
-            alert("뉴스글 작성이 완료되었습니다.");
+            alert("수정이 완료되었습니다.");
             writeFrm.submit();
         }else{
             return false;

@@ -16,8 +16,4 @@ public class BoardController {
         return "menu/news/view";
     }
 
-    @RequestMapping("/menu/news/write")
-    public String write(){
-        return "menu/news/write";
-    }
 }
