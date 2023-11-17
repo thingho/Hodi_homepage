@@ -25,6 +25,11 @@ public class FController {
         return "index";
     }
 
+    @RequestMapping("/admin")
+    public String admin(){
+        return "admin";
+    }
+
     @GetMapping("/login")
     public String login(){
         return "login";
@@ -37,6 +42,7 @@ public class FController {
         if(mdto != null){
             session.setAttribute("sessionId", mdto.getId());
             session.setAttribute("sessionName", mdto.getName());
+            session.setAttribute("sessionLevel", mdto.getLevel());
         } else {
             model.addAttribute("loginCheck", "fail");
             return "/login";

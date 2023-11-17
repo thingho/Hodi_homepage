@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org/">
 <!--head-->
-<head th:replace="/head.html :: head"></head>
+<head th:replace="/layout/head.html :: head"></head>
 <body>
 <!--상단 header-->
-<div th:replace="/header.html :: header"></div>
+<div th:replace="/layout/header.html :: header"></div>
 <!--sub_back-->
-<div th:replace="/sub_back.html :: sub_back"></div>
+<div th:replace="/layout/sub_back.html :: sub_back"></div>
 <div class="main_wrap">
   <div class="content">
     <div class="content_title"><strong>뉴스소식</strong><div class="bottom_border"></div></div>
     <div class="board_con">
-      <div class="board_view">
+        <!--<div class="board_view" th:each="ndto : ${ndto}">
+            <dl>
+                <dt th:text="${ndto.ntitle}"></dt>
+                <dd>
+                    NO.<span th:text="${ndto.nno}"></span>
+                    작성일<span th:text="${ndto.ndate}">2023-11-14</span>
+                    작성자<span th:text="${ndto.name}">관리자</span>
+                    조회수<span th:text="${ndto.nhits}">12</span>
+                </dd>
+                <dd>
+                    &lt;!&ndash;sub.css 1124번 이미지 크기 추가&ndash;&gt;
+                    <img src="../../../image/logo.gif">
+                </dd>
+                <dd th:text="${ndto.ncontent}"></dd>
+                &lt;!&ndash;sub.css 1120번 hover 색깔 추가&ndash;&gt;
+                <dt>
+                    <a href="../news/list_news">목록</a>
+                    <a th:if="${session.sessionId == 'admin'}" onclick="updateBtn()">수정</a>
+                    <a th:if="${session.sessionId == 'admin'}" onclick="deleteBtn()">삭제</a>
+                </dt>
+            </dl>
+
+        </div>-->
+      <div class="board_view" th:each="ndto : ${ndto}">
           <dl>
-              <dt>뉴스 소식에 대한 제목 부분</dt>
+              <dt th:text="${ndto.ntitle}">뉴스 소식에 대한 제목 부분</dt>
               <dd>
                   NO.<span>1</span>
                   작성일<span>2023-11-14</span>
@@ -22,7 +45,7 @@
               </dd>
               <dd>
                   <!--sub.css 1124번 이미지 크기 추가-->
-                  <img src="../..//image/sub/Img01.jpg">
+                  <img src="../../../image/logo.gif">
               </dd>
               <dd>뉴스소식 입니다.ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
                   <br>뉴스소식 입니다.ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
@@ -41,16 +64,31 @@
               </dd>
               <!--sub.css 1120번 hover 색깔 추가-->
               <dt>
-                  <a href="../news/list">목록</a>
+                  <a href="../news/list_news">목록</a>
+                  <a th:if="${session.sessionId == 'admin'}" onclick="updateBtn()">수정</a>
+                  <a th:if="${session.sessionId == 'admin'}" onclick="deleteBtn()">삭제</a>
               </dt>
           </dl>
-
       </div>
     </div>
   </div>
 </div>
+<script>
+    function updateBtn(){
+        var conf = confirm("뉴스글을 수정하시겠습니까?");
+        if(conf){
+            location.href="../news/update_news";
+        }
+    }
+    function deleteBtn(){
+        var conf = confirm("뉴스글을 삭제하시겠습니까?");
+        if(conf){
+            alert("삭제가 왼료되었습니다.");
+        }
+    }
+</script>
 
 <!--하단 footer-->
-<div th:replace="/footer.html :: footer"></div>
+<div th:replace="/layout/footer.html :: footer"></div>
 </body>
 </html>

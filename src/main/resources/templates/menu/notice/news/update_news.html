@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <!--head-->
-<head th:replace="/head.html :: head"></head>
+<head th:replace="/layout/head.html :: head"></head>
 <body>
 <!--상단 header-->
-<div th:replace="/header.html :: header"></div>
+<div th:replace="/layout/header.html :: header"></div>
 <!--sub_back-->
-<div th:replace="/sub_back.html :: sub_back"></div>
+<div th:replace="/layout/sub_back.html :: sub_back"></div>
 <div class="main_wrap">
     <div class="content">
         <div class="content_title"><strong>뉴스글 수정</strong><div class="bottom_border"></div></div>
@@ -37,7 +37,7 @@
                         <!--sub.css 1064~1073번 hover 색깔 추가-->
                         <dt>
                             <a onclick="updateBtn()">수정</a>
-                            <a onclick="location.href='../../admin/adminindex'">취소</a>
+                            <a onclick="location.href='../../notice/news/view_news'">취소</a>
                         </dt>
                     </dl>
                 </form>
@@ -47,8 +47,12 @@
 </div>
 
 <!--하단 footer-->
-<div th:replace="/footer.html :: footer"></div>
+<div th:replace="/layout/footer.html :: footer"></div>
 <script>
+    if("[[${session.sessionId}]]" == ""){
+        alert("잘못된 접근입니다.");
+        location.href="../index";
+    }
     function updateBtn(){
         if ($("#name").val() == ""){
             alert("이름을 입력해주세요.");

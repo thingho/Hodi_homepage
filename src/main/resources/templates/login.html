@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org/">
 <!--head-->
-<head th:replace="/head.html :: head"></head>
+<head th:replace="/layout/head.html :: head"></head>
 <body>
 <!--상단 header-->
-<div th:replace="/header.html :: header"></div>
+<div th:replace="/layout/header.html :: header"></div>
 <!--sub_back-->
-<div th:replace="/sub_back.html :: sub_back"></div>
+<div th:replace="/layout_login/sub_back_login.html :: sub_back"></div>
 <div class="main_wrap">
     <div class="content">
         <div class="login_title"><strong>로그인</strong><div class="bottom_border"></div></div>
@@ -40,6 +40,6 @@
     }
 </script>
 <!--하단 footer-->
-<div th:replace="/footer.html :: footer"></div>
+<div th:replace="/layout/footer.html :: footer"></div>
 </body>
 </html>

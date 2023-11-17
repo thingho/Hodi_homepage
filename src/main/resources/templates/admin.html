@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<script>
+    if("[[${session.sessionId}]]" == ""){
+        alert("잘못된 접근입니다.");
+        location.href="../index";
+    }
+</script>
+<!--head-->
+<head th:replace="/layout_admin/head_admin.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout_admin/header_admin.html :: header"></div>
+<!--sub_back-->
+<div th:replace="/layout_admin/sub_back_admin.html :: sub_back"></div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"></div>
+        <div class="board_con">
+            <div class="list_admin">
+                <fieldset class="search_form">
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

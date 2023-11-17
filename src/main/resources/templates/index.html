@@ -32,7 +32,7 @@
 <head th:replace="/main_head.html :: main_head"></head>
 <body>
 <!--상단 header-->
-<div th:replace="/header.html :: header"></div>
+<div th:replace="/layout/header.html :: header"></div>
 
 <div id="fullpage">
     <div class="section" id="section0">
@@ -157,13 +157,13 @@
         </ul>
         <div class="section_content" style="text-align: center;">
             <ul>
-                <li onclick="javascript:location.href='./menu/news/list';">뉴스소식<h5>NEWS</h5><img src="./image/main/notice_01.png" alt="뉴스소식"></li>
+                <li onclick="javascript:location.href='./menu/news/list_news';">뉴스소식<h5>NEWS</h5><img src="./image/main/notice_01.png" alt="뉴스소식"></li>
             </ul>
         </div>
     </div>
     <div class="section fp-auto-height" id="section5">
         <!--하단 footer-->
-        <div th:replace="/footer.html :: footer"></div>
+        <div th:replace="/layout/footer.html :: footer"></div>
     </div>
 </div>
 <a value=" " class="top_button"> </a>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<!--sub_back-->
+<div th:replace="/layout/sub_back.html :: sub_back"></div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>뉴스소식</strong><div class="bottom_border"></div></div>
+        <div class="board_con">
+            <div class="search">
+                <p class="search_text"><span>Total : </span>0개<span> (<strong>1</strong>/0 Page)</span></p>
+                <fieldset class="search_form">
+                    <form action="">
+                        <select name="search" id="">
+                            <option value="subject|content">전체</option>
+                            <option value="subject">제목</option>
+                            <option value="content">내용</option>
+                        </select>
+                        <input type="text" name="search_text" placeholder="검색어 입력" value="" id="">
+                        <input type="submit" class="btn btn_black" value="검색">
+                        <input type="button" class="btn btn_black" value="초기화">
+                    </form>
+                </fieldset>
+            </div>
+            <div class="board_list" th:each="news : ${news}">
+                <ul>
+                    <li>
+                        <a>
+                            <span><img src="../../../image/logo.gif"></span>
+                            <dl>
+                                <dt th:text="${news.ntitle}"></dt>
+                                <dd th:text="${news.ncontent}"></dd>
+                            </dl>
+                        </a>
+                        <a th:href="@{../news/view_news(nno = ${news.nno})}" class="btn_area">자세히 보기</a>
+                        <!--<a href="../news/view_news" class="btn_area">자세히 보기</a>-->
+                    </li>
+                </ul>
+            </div>
+            <div style="text-align: right;">
+                <a th:if="${session.sessionLevel > 1}" href="../news/write_news">작성</a>
+            </div>
+            <div class="page">
+                <a href="#" class="first_prev" title="처음페이지">&lt;&lt;</a>
+                <a href="#" class="prev" title="이전페이지">&lt;</a>
+                <a href="#" class="on" onclick="return false;">1</a>
+                <a href="#" title="2 페이지">2</a>
+                <a href="#" title="3 페이지">3</a>
+                <a href="#" class="next" title="다음페이지">&gt;</a>
+                <a href="#" class="last_next" title="마지막페이지">&gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

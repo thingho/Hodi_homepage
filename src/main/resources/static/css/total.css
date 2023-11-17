@@ -82,6 +82,7 @@ a:link, a:visited, a:active{
 	margin-left: 1850px;
 	margin-top: 25px;
 	z-index: 999;
+	cursor: pointer;
 }
 
 .header .logo div{
