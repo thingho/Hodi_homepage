@@ -2,11 +2,50 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.java.hodipg.mapper.NewsMapper">
-    <select id="selectAll" resultType="com.java.hodipg.dto.NewsDto">
+    <select id="selectAll" resultType="com.java.hodipg.dto.NewsDto" parameterType="map">
         select * from news
+        <if test="category == 'all'">
+            where ntitle like concat('%',#{word},'%') or ncontent like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ntitle'">
+            where ntitle like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ncontent'">
+            where ncontent like concat('%',#{word},'%')
+        </if>
+        order by nno
+        limit #{startPage}, #{endRow}
+    </select>
+
+    <select id="selectListCount" resultType="int">
+        select count(*) from news
+        <if test="category == 'all'">
+            where ntitle like concat('%',#{word},'%') or ncontent like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ntitle'">
+            where ntitle like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ncontent'">
+            where ncontent like concat('%',#{word},'%')
+        </if>
     </select>
 
     <select id="selectOne" resultType="com.java.hodipg.dto.NewsDto">
         select * from news where nno=#{nno}
     </select>
+
+    <insert id="insertOne">
+        insert into news (name, ntitle, ncontent, ndate, nfile)
+        values (#{name}, #{ntitle},#{ncontent}, now(), #{nfile});
+    </insert>
+
+    <update id="updateOne">
+        update news set
+        ntitle=#{ntitle},ncontent=#{ncontent},nfile=#{nfile} where nno=#{nno}
+    </update>
+
+    <delete id="deleteOne">
+        delete from news where nno=#{nno}
+    </delete>
+
 </mapper>

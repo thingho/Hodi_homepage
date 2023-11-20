@@ -21,12 +21,12 @@
                         </dd>
                         <dd>
                             <ul>제목
-                                <li><input type="text" name="btitle" placeholder="제목을 입력해주세요."></li>
+                                <li><input type="text" name="ntitle" id="ntitle" placeholder="제목을 입력해주세요."></li>
                             </ul>
                         </dd>
                         <dd>
                             <ul>내용
-                                <li><textarea name="bcontent" placeholder="내용을 입력해주세요."></textarea></li>
+                                <li><textarea name="ncontent" id="ncontent" placeholder="내용을 입력해주세요."></textarea></li>
                             </ul>
                         </dd>
                         <dd>
@@ -60,23 +60,18 @@
     }
 
     function writeBtn(){
-        if("[[${session.sessionId}]]" == ""){
+        if("[[${session.sessionId}]]" != "admin"){
             alert("관리자만 작성이 가능합니다.");
             return false;
         }
-        if ($("#name").val() == ""){
-            alert("이름을 입력해주세요.");
-            $("#name").focus();
-            return false;
-        }
-        if ($("#btitle").val() == ""){
+        if ($("#ntitle").val() == ""){
             alert("제목을 입력해주세요.");
-            $("#btitle").focus();
+            $("#ntitle").focus();
             return false;
         }
-        if ($("#bcontent").val() == ""){
+        if ($("#ncontent").val() == ""){
             alert("내용을 입력해주세요.");
-            $("#bcontent").focus();
+            $("#ncontent").focus();
             return false;
         }
 

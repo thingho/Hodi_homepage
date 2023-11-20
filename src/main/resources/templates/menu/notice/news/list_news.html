@@ -14,15 +14,15 @@
             <div class="search">
                 <p class="search_text"><span>Total : </span>0개<span> (<strong>1</strong>/0 Page)</span></p>
                 <fieldset class="search_form">
-                    <form action="">
-                        <select name="search" id="">
-                            <option value="subject|content">전체</option>
-                            <option value="subject">제목</option>
-                            <option value="content">내용</option>
+                    <form action="/menu/notice/news/list_news" name="search" method="post">
+                        <select name="category">
+                            <option value="all">전체</option>
+                            <option value="ntitle">제목</option>
+                            <option value="ncontent">내용</option>
                         </select>
-                        <input type="text" name="search_text" placeholder="검색어 입력" value="" id="">
-                        <input type="submit" class="btn btn_black" value="검색">
-                        <input type="button" class="btn btn_black" value="초기화">
+                        <input type="text" name="word" placeholder="검색어 입력" id="word" th:value="${word}">
+                        <input type="button" class="btn btn_black" onclick="searchBtn()" value="검색">
+                        <input type="button" class="btn btn_black" onclick="location.href='/menu/notice/news/list_news'" value="초기화">
                     </form>
                 </fieldset>
             </div>
@@ -30,28 +30,38 @@
                 <ul>
                     <li>
                         <a>
-                            <span><img src="../../../image/logo.gif"></span>
+                            <span>
+                                <img th:if="${news.nfile != null}" th:src="${news.nfile}">
+                                <img th:if="${news.nfile == null}" src="../../../image/logo.gif">
+                            </span>
                             <dl>
                                 <dt th:text="${news.ntitle}"></dt>
                                 <dd th:text="${news.ncontent}"></dd>
                             </dl>
                         </a>
-                        <a th:href="@{../news/view_news(nno = ${news.nno})}" class="btn_area">자세히 보기</a>
+                        <a th:href="@{../news/view_news(nno = ${news.nno},category=${category},word=${word})}" class="btn_area">자세히 보기</a>
                         <!--<a href="../news/view_news" class="btn_area">자세히 보기</a>-->
                     </li>
                 </ul>
             </div>
-            <div style="text-align: right;">
+            <div class="write_button">
                 <a th:if="${session.sessionLevel > 1}" href="../news/write_news">작성</a>
             </div>
             <div class="page">
-                <a href="#" class="first_prev" title="처음페이지">&lt;&lt;</a>
-                <a href="#" class="prev" title="이전페이지">&lt;</a>
-                <a href="#" class="on" onclick="return false;">1</a>
-                <a href="#" title="2 페이지">2</a>
-                <a href="#" title="3 페이지">3</a>
-                <a href="#" class="next" title="다음페이지">&gt;</a>
-                <a href="#" class="last_next" title="마지막페이지">&gt;&gt;</a>
+                <a th:if="${page != 1}" th:href="@{../news/list_news(page=1,category=${category},word=${word})}" class="first_prev">&lt;&lt;</a>
+                <a th:if="${page == 1}" class="first_prev">&lt;&lt;</a>
+                <a th:if="${page > 1}" th:href="@{../news/list_news(page=${page}-1,category=${category},word=${word})}" class="prev" >&lt;</a>
+                <a th:if="${page == 1}" class="prev" >&lt;</a>
+
+                <th:block th:each="num: ${#numbers.sequence(startPage+1, endPage)}">
+                    <a th:if="${num != page}" th:href="@{../news/list_news(page=${num},category=${category},word=${word})}" th:text="${num}"></a>
+                    <a th:if="${num == page}" class="on" onclick="return false;" th:text="${num}"></a>
+                </th:block>
+
+                <a th:if="${page < maxPage}" th:href="@{../news/list_news(page=${page+1},category=${category},word=${word})}" class="next">&gt;</a>
+                <a th:if="${page == maxPage}" class="next">&gt;</a>
+                <a th:if="${page != maxPage}" th:href="@{../news/list_news(page=${maxPage},category=${category},word=${word})}" class="last_next">&gt;&gt;</a>
+                <a th:if="${page == maxPage}" class="last_next">&gt;&gt;</a>
             </div>
         </div>
     </div>
@@ -61,5 +71,15 @@
 </script>
 <!--하단 footer-->
 <div th:replace="/layout/footer.html :: footer"></div>
+<script>
+    function searchBtn(){
+        if($("#word").val() == ""){
+            alert("검색어를 입력해주세요.")
+            $("#word").focus();
+            return false;
+        }
+        search.submit();
+    }
+</script>
 </body>
 </html>

@@ -16,5 +16,4 @@ public class NewsDto {
     private String ncontent;
     private Date ndate;
     private String nfile;
-    private int nhits;
 }

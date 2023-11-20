@@ -7,7 +7,15 @@ import java.util.ArrayList;
 
 @Mapper
 public interface NewsMapper {
-    ArrayList<NewsDto> selectAll();
+    ArrayList<NewsDto> selectAll(int startPage, int endRow,String category,String word);
 
     NewsDto selectOne(int nno);
+
+    void insertOne(NewsDto ndto);
+
+    void deleteOne(int nno);
+
+    void updateOne(NewsDto ndto);
+
+    int selectListCount(String category, String word);
 }

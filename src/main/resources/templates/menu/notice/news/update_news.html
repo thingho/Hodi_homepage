@@ -11,22 +11,22 @@
     <div class="content">
         <div class="content_title"><strong>뉴스글 수정</strong><div class="bottom_border"></div></div>
         <div class="board_con">
-            <div class="board_write">
-                <form action="/admin/newsUpdate" name="updateFrm" method="post" enctype="multipart/form-data">
-                    <dl>
+            <div class="board_update">
+                <form action="/menu/notice/news/update_news" name="updateFrm" method="post" enctype="multipart/form-data">
+                    <dl th:each="ndto : ${ndto}">
                         <dd>
                             <ul>작성자
-                                <li><input type="hidden" name="name" class="tiny_text" th:value="${session.sessionName}" th:text="${session.sessionName}"></li>
+                                <li><input type="hidden" name="name" th:value="${ndto.name}" th:text="${ndto.name}"></li>
                             </ul>
                         </dd>
                         <dd>
                             <ul>제목
-                                <li><input type="text" name="btitle" placeholder="제목을 입력해주세요."></li>
+                                <li><input type="text" name="ntitle" id="ntitle" placeholder="제목을 입력해주세요." th:value="${ndto.ntitle}"></li>
                             </ul>
                         </dd>
                         <dd>
                             <ul>내용
-                                <li><textarea name="bcontent" placeholder="내용을 입력해주세요."></textarea></li>
+                                <li><textarea name="ncontent" id="ncontent" placeholder="내용을 입력해주세요." th:text="${ndto.ncontent}"></textarea></li>
                             </ul>
                         </dd>
                         <dd>
@@ -37,7 +37,7 @@
                         <!--sub.css 1064~1073번 hover 색깔 추가-->
                         <dt>
                             <a onclick="updateBtn()">수정</a>
-                            <a onclick="location.href='../../notice/news/view_news'">취소</a>
+                            <a onclick="location.href='../../notice/news/view_news?nno=1'">취소</a>
                         </dt>
                     </dl>
                 </form>
@@ -54,25 +54,20 @@
         location.href="../index";
     }
     function updateBtn(){
-        if ($("#name").val() == ""){
-            alert("이름을 입력해주세요.");
-            $("#name").focus();
-            return false;
-        }
-        if ($("#btitle").val() == ""){
+        if ($("#ntitle").val() == ""){
             alert("제목을 입력해주세요.");
-            $("#btitle").focus();
+            $("#ntitle").focus();
             return false;
         }
-        if ($("#bcontent").val() == ""){
+        if ($("#ncontent").val() == ""){
             alert("내용을 입력해주세요.");
-            $("#bcontent").focus();
+            $("#ncontent").focus();
             return false;
         }
-        var conf = confirm("뉴스글을 수정하시겠습니까?");
+        var conf = confirm("수정한 내용을 저장하시겠습니까?");
         if(conf){
             alert("수정이 완료되었습니다.");
-            writeFrm.submit();
+            updateFrm.submit();
         }else{
             return false;
         }
