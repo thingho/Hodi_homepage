@@ -15,7 +15,10 @@
     <a href="../../../index" class="logo">
         <img src="../../..//image/logo.gif" alt="HODI">
     </a>
-    <a th:if="${session.sessionId != null}" onclick="logoutBtn()" class="login_logo">
+    <a th:if="${session.sessionId != 'admin' && session.sessionId != null}" onclick="logoutBtn()" class="login_logo">
+        <img src="../../..//image/logout.png" alt="logout">
+    </a>
+    <a th:if="${session.sessionId == 'admin'}" href="../../../admin" class="login_logo">
         <img src="../../..//image/logout.png" alt="logout">
     </a>
     <div class="navContainer transform">
@@ -51,9 +54,10 @@
                     </ul>
                 </li>
                 <li >
-                    <a href="#">공지사항</a>
+                    <a href="#">커뮤니티</a>
                     <ul>
-                        <li><a href="../../../menu/notice/news/list_news">뉴스소식</a></li>
+                        <li><a href="../../../menu/community/news/list_news">뉴스소식</a></li>
+                        <li><a href="#">공지사항</a></li>
                     </ul>
                 </li>
 

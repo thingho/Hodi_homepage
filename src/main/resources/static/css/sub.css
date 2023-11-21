@@ -1057,7 +1057,7 @@ table.info tr td{
 }
 
 /*작성 버튼*/
-.board_con .write_button {
+/*.board_con .write_button {
 	text-align: right;
 }
 .board_con .write_button a{
@@ -1066,7 +1066,7 @@ table.info tr td{
 }
 .board_con .write_button a:hover{
 	color:#2c7cdd;
-}
+}*/
 
 
 .board_con .board_write{
@@ -1224,6 +1224,9 @@ table.info tr td{
 	content:"|";
 	color:#aaa;
 	margin-left: 15px;
+}
+.board_con .board_view dl span a:hover{
+	color:#2c7cdd;
 }
 
 

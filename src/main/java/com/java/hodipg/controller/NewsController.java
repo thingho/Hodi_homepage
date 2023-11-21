@@ -22,7 +22,7 @@ public class NewsController {
     @Autowired
     NewsSerivce newsSerivce;
 
-    @RequestMapping("/menu/notice/news/list_news")
+    @RequestMapping("/menu/community/news/list_news")
     public String list_news(@RequestParam(defaultValue ="1")int page,
                             String category, String word, Model model){
 
@@ -39,10 +39,10 @@ public class NewsController {
         model.addAttribute("category",map.get("category"));
         model.addAttribute("word",map.get("word"));
 
-        return "menu/notice/news/list_news";
+        return "menu/community/news/list_news";
     }
 
-    @RequestMapping("/menu/notice/news/view_news")
+    @RequestMapping("/menu/community/news/view_news")
     public String view_news(@RequestParam(defaultValue = "1")int nno,
                             @RequestParam(defaultValue = "1") int page,
                             String category, String word, Model model){
@@ -53,15 +53,15 @@ public class NewsController {
         model.addAttribute("category",category);
         model.addAttribute("word",word);
         model.addAttribute("page", page);
-        return "menu/notice/news/view_news";
+        return "menu/community/news/view_news";
     }
 
-    @GetMapping("/menu/notice/news/write_news")
+    @GetMapping("/menu/community/news/write_news")
     public String write_news(){
-        return "menu/notice/news/write_news";
+        return "menu/community/news/write_news";
     }
 
-    @PostMapping("/menu/notice/news/write_news")
+    @PostMapping("/menu/community/news/write_news")
     public String write_news(NewsDto ndto, @RequestParam(value = "file" , required = false) MultipartFile file) throws Exception {
 
         String filename = null;
@@ -69,31 +69,33 @@ public class NewsController {
             String original = file.getOriginalFilename();
             String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd_HHmmss"));
             filename = time+"_"+original;
-            String uploadurl = "c://workspace/images/";
+            /*String uploadurl = "c://workspace/images/";*/
+            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image\\news\\";
             File f = new File(uploadurl + filename);
             file.transferTo(f);
+            System.out.println(uploadurl);
         }
         ndto.setNfile(filename);
         newsSerivce.insertOne(ndto);
         return "redirect:list_news";
     }
 
-    @RequestMapping("/menu/notice/news/delete_news")
+    @RequestMapping("/menu/community/news/delete_news")
     public String delete_news(int nno){
         newsSerivce.deleteOne(nno);
         return "redirect:list_news";
     }
 
-    @GetMapping("/menu/notice/news/update_news")
+    @GetMapping("/menu/community/news/update_news")
     public String update_news(int nno, Model model){
 
         HashMap<String, Object> map = newsSerivce.selectOne(nno);
         model.addAttribute("ndto", map.get("newsDto"));
 
-        return "menu/notice/news/update_news";
+        return "menu/community/news/update_news";
     }
 
-    @PostMapping("/menu/notice/news/update_news")
+    @PostMapping("/menu/community/news/update_news")
     public String update_news(NewsDto ndto, @RequestParam(value = "file" , required = false) MultipartFile file) throws Exception {
 
         String filename = null;
@@ -101,13 +103,14 @@ public class NewsController {
             String original = file.getOriginalFilename();
             String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd_HHmmss"));
             filename = time+"_"+original;
-            String uploadurl = "c://workspace/images/";
+            /*String uploadurl = "c://workspace/images/";*/
+            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image\\news\\";
             File f = new File(uploadurl + filename);
             file.transferTo(f);
         }
         ndto.setNfile(filename);
         newsSerivce.updateOne(ndto);
-        return "redirect:view_news?nno=1";
+        return "redirect:list_news";
     }
 
 }

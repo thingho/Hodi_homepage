@@ -5,8 +5,17 @@
 <body>
 <!--상단 header-->
 <div th:replace="/layout/header.html :: header"></div>
-<!--sub_back-->
-<div th:replace="/layout_login/sub_back_login.html :: sub_back"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+                <li class="home"><a href="../../index">HOME</a></li>
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >로그인</a></li>
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
 <div class="main_wrap">
     <div class="content">
         <div class="login_title"><strong>로그인</strong><div class="bottom_border"></div></div>

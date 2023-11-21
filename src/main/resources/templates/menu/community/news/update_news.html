@@ -5,18 +5,42 @@
 <body>
 <!--상단 header-->
 <div th:replace="/layout/header.html :: header"></div>
-<!--sub_back-->
-<div th:replace="/layout/sub_back.html :: sub_back"></div>
+<div th:fragment="sub_back" class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="../../../index">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >커뮤니티</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../sub01/sub1.php">회사소개</a></li>
+                        <li><a href="../sub02/sub1_1.php">도서관사업</a></li>
+                        <li><a href="../sub03/sub1_1.php">전력사업</a></li>
+                        <li><a href="../..//menu//community/news/list_news">커뮤니티</a></li>
+                    </ul>
+                </li>
+                <li class="dep2"><a href='javascript:void(0);' class="cur" >뉴스글 수정</a></li>
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
 <div class="main_wrap">
     <div class="content">
         <div class="content_title"><strong>뉴스글 수정</strong><div class="bottom_border"></div></div>
         <div class="board_con">
             <div class="board_update">
-                <form action="/menu/notice/news/update_news" name="updateFrm" method="post" enctype="multipart/form-data">
+                <form action="/menu/community/news/update_news" name="updateFrm" id="updateFrm" method="post" enctype="multipart/form-data">
                     <dl th:each="ndto : ${ndto}">
                         <dd>
                             <ul>작성자
                                 <li><input type="hidden" name="name" th:value="${ndto.name}" th:text="${ndto.name}"></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>링크
+                                <li><input type="text" name="nlink" id="nlink" placeholder="뉴스 링크를 입력해세요." th:value="${ndto.nlink}"></li>
                             </ul>
                         </dd>
                         <dd>
@@ -31,13 +55,20 @@
                         </dd>
                         <dd>
                             <ul>사진
-                                <li><input type="file" name="file"></li>
+                                <li>
+                                    <th:block th:if="${ndto.nfile != null}" >
+                                        <img th:src="@{../../../image/news/}+${ndto.nfile}" style="width: 150px;">
+                                        <input type="hidden" name="file" th:value="${ndto.nfile}"/>
+                                        <br><br>
+                                    </th:block>
+                                    <input type="file" name="file">
+                                </li>
                             </ul>
                         </dd>
                         <!--sub.css 1064~1073번 hover 색깔 추가-->
                         <dt>
-                            <a onclick="updateBtn()">수정</a>
-                            <a onclick="location.href='../../notice/news/view_news?nno=1'">취소</a>
+                            <a onclick="updateBtn()">저장</a>
+                            <a th:href="@{../news/view_news(page=${page},nno = ${ndto.nno})}">취소</a>
                         </dt>
                     </dl>
                 </form>
@@ -51,7 +82,7 @@
 <script>
     if("[[${session.sessionId}]]" == ""){
         alert("잘못된 접근입니다.");
-        location.href="../index";
+        location.href="../../../index";
     }
     function updateBtn(){
         if ($("#ntitle").val() == ""){
@@ -67,6 +98,7 @@
         var conf = confirm("수정한 내용을 저장하시겠습니까?");
         if(conf){
             alert("수정이 완료되었습니다.");
+            location.href
             updateFrm.submit();
         }else{
             return false;

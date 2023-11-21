@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 @Mapper
 public interface NewsMapper {
-    ArrayList<NewsDto> selectAll(int startPage, int endRow,String category,String word);
+    ArrayList<NewsDto> selectAll(int startRow, int endRow,String category,String word);
 
     NewsDto selectOne(int nno);
 

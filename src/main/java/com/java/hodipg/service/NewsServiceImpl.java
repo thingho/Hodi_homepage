@@ -4,6 +4,7 @@ import com.java.hodipg.dto.NewsDto;
 import com.java.hodipg.mapper.NewsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,24 +15,25 @@ public class NewsServiceImpl implements NewsSerivce{
     @Autowired
     NewsMapper newsMapper;
     @Override
-    public HashMap<String, Object> selectAll(int page, String category, String word) {
+    public HashMap<String, Object> selectAll(@RequestParam(defaultValue ="1")int page,
+                                             String category, String word) {
 
         HashMap<String, Object> map = new HashMap<>();
 
         //게시글 전체개수
         int listCount = newsMapper.selectListCount(category,word);
         //최대페이지
-        int maxPage = (int)Math.ceil((double)listCount/10);
-        int startPage = (int)((page-1)/10)*10; // 시작페이지 1
-        int endPage = startPage+10-1; // 마지막페이지
+        int maxPage = (int)Math.ceil((double)listCount/5);
+        int startPage = (int)((page-1)/5)*5; // 시작페이지 1
+        int endPage = startPage+5-1+1; // 마지막페이지
 
-        int startRow = (page-1)*10+1; //1page : 1-20, 2page : 21-40
-        int endRow = startRow+10-1;
+        int startRow = (page-1)*5; //1page : 1-20, 2page : 21-40
+        int endRow = startRow+5;
 
         //endPage가 maxPage보다 더 크면 maxPage만 노출
         if(endPage>maxPage) endPage=maxPage;
 
-        ArrayList<NewsDto> news = newsMapper.selectAll(startPage,endRow,category,word);
+        ArrayList<NewsDto> news = newsMapper.selectAll(startRow,endRow,category,word);
 
         map.put("news",news);
 

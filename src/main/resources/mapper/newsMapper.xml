@@ -14,7 +14,7 @@
             where ncontent like concat('%',#{word},'%')
         </if>
         order by nno
-        limit #{startPage}, #{endRow}
+        limit #{startRow}, 5
     </select>
 
     <select id="selectListCount" resultType="int">
@@ -35,13 +35,13 @@
     </select>
 
     <insert id="insertOne">
-        insert into news (name, ntitle, ncontent, ndate, nfile)
-        values (#{name}, #{ntitle},#{ncontent}, now(), #{nfile});
+        insert into news (name, ntitle, ncontent, ndate, nfile, nlink)
+        values (#{name}, #{ntitle},#{ncontent}, now(), #{nfile}, #{nlink});
     </insert>
 
     <update id="updateOne">
         update news set
-        ntitle=#{ntitle},ncontent=#{ncontent},nfile=#{nfile} where nno=#{nno}
+        nlink=#{nlink},ntitle=#{ntitle},ncontent=#{ncontent},nfile=#{nfile} where nno=#{nno}
     </update>
 
     <delete id="deleteOne">

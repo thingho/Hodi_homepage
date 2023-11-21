@@ -12,9 +12,12 @@
         <div class="content_title"><strong>뉴스소식</strong><div class="bottom_border"></div></div>
         <div class="board_con">
             <div class="search">
-                <p class="search_text"><span>Total : </span>0개<span> (<strong>1</strong>/0 Page)</span></p>
+                <p class="search_text">ㄴ
+                    <span>Total : </span>
+                    <th:block th:text="${listCount}"></th:block>개<span> (<strong th:text="${page}">1</strong>/<th:block th:text="${maxPage}"></th:block> Page)</span>
+                </p>
                 <fieldset class="search_form">
-                    <form action="/menu/notice/news/list_news" name="search" method="post">
+                    <form action="/menu/community/news/list_news" name="search" method="post">
                         <select name="category">
                             <option value="all">전체</option>
                             <option value="ntitle">제목</option>
@@ -22,7 +25,7 @@
                         </select>
                         <input type="text" name="word" placeholder="검색어 입력" id="word" th:value="${word}">
                         <input type="button" class="btn btn_black" onclick="searchBtn()" value="검색">
-                        <input type="button" class="btn btn_black" onclick="location.href='/menu/notice/news/list_news'" value="초기화">
+                        <input type="button" class="btn btn_black" onclick="location.href='/menu/community/news/list_news'" value="초기화">
                     </form>
                 </fieldset>
             </div>
@@ -31,7 +34,8 @@
                     <li>
                         <a>
                             <span>
-                                <img th:if="${news.nfile != null}" th:src="${news.nfile}">
+                                <!--<img th:if="${news.nfile != null}" th:src="${news.nfile}">-->
+                                <img th:if="${news.nfile != null}" th:src="@{../../../image/news/}+${news.nfile}">
                                 <img th:if="${news.nfile == null}" src="../../../image/logo.gif">
                             </span>
                             <dl>
@@ -39,14 +43,14 @@
                                 <dd th:text="${news.ncontent}"></dd>
                             </dl>
                         </a>
-                        <a th:href="@{../news/view_news(nno = ${news.nno},category=${category},word=${word})}" class="btn_area">자세히 보기</a>
+                        <a th:href="@{../news/view_news(page=${page},nno = ${news.nno},category=${category},word=${word})}" class="btn_area">자세히 보기</a>
                         <!--<a href="../news/view_news" class="btn_area">자세히 보기</a>-->
                     </li>
                 </ul>
             </div>
-            <div class="write_button">
+            <!--<div class="write_button">
                 <a th:if="${session.sessionLevel > 1}" href="../news/write_news">작성</a>
-            </div>
+            </div>-->
             <div class="page">
                 <a th:if="${page != 1}" th:href="@{../news/list_news(page=1,category=${category},word=${word})}" class="first_prev">&lt;&lt;</a>
                 <a th:if="${page == 1}" class="first_prev">&lt;&lt;</a>
@@ -54,8 +58,8 @@
                 <a th:if="${page == 1}" class="prev" >&lt;</a>
 
                 <th:block th:each="num: ${#numbers.sequence(startPage+1, endPage)}">
-                    <a th:if="${num != page}" th:href="@{../news/list_news(page=${num},category=${category},word=${word})}" th:text="${num}"></a>
                     <a th:if="${num == page}" class="on" onclick="return false;" th:text="${num}"></a>
+                    <a th:if="${num != page }" th:href="@{../news/list_news(page=${num},category=${category},word=${word})}" th:text="${num}"></a>
                 </th:block>
 
                 <a th:if="${page < maxPage}" th:href="@{../news/list_news(page=${page+1},category=${category},word=${word})}" class="next">&gt;</a>
