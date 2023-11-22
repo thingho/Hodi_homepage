@@ -5,7 +5,7 @@
 <body>
 <!--상단 header-->
 <div th:replace="/layout/header.html :: header"></div>
-<div th:fragment="sub_back" class="sub_back">
+<div class="sub_back">
     <div class="sub_title">
         <div class="sub_wrap">
             <ul class="main_text">
@@ -84,7 +84,12 @@
         alert("잘못된 접근입니다.");
         location.href="../../../index";
     }
+
     function updateBtn(){
+        if("[[${session.sessionId}]]" != "admin"){
+            alert("관리자만 수정이 가능합니다.");
+            location.href="../../../index";
+        }
         if ($("#ntitle").val() == ""){
             alert("제목을 입력해주세요.");
             $("#ntitle").focus();
@@ -95,6 +100,7 @@
             $("#ncontent").focus();
             return false;
         }
+
         var conf = confirm("수정한 내용을 저장하시겠습니까?");
         if(conf){
             alert("수정이 완료되었습니다.");

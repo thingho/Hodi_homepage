@@ -24,14 +24,14 @@ public class NewsServiceImpl implements NewsSerivce{
         int listCount = newsMapper.selectListCount(category,word);
         //최대페이지
         int maxPage = (int)Math.ceil((double)listCount/5);
-        int startPage = (int)((page-1)/5)*5; // 시작페이지 1
-        int endPage = startPage+5-1+1; // 마지막페이지
+        int startPage = (int)((page-1)/5)*5+1; // 시작페이지 1
+        int endPage = startPage+5-1; // 마지막페이지
 
         int startRow = (page-1)*5; //1page : 1-20, 2page : 21-40
         int endRow = startRow+5;
 
         //endPage가 maxPage보다 더 크면 maxPage만 노출
-        if(endPage>maxPage) endPage=maxPage;
+        if(endPage>maxPage) {endPage=maxPage;}
 
         ArrayList<NewsDto> news = newsMapper.selectAll(startRow,endRow,category,word);
 

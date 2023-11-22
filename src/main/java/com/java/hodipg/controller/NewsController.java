@@ -73,7 +73,6 @@ public class NewsController {
             String uploadurl = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image\\news\\";
             File f = new File(uploadurl + filename);
             file.transferTo(f);
-            System.out.println(uploadurl);
         }
         ndto.setNfile(filename);
         newsSerivce.insertOne(ndto);

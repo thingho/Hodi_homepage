@@ -41,7 +41,7 @@
 
     <update id="updateOne">
         update news set
-        nlink=#{nlink},ntitle=#{ntitle},ncontent=#{ncontent},nfile=#{nfile} where nno=#{nno}
+        ntitle=#{ntitle},ncontent=#{ncontent},nfile=#{nfile},nlink=#{nlink} where nno=#{nno}
     </update>
 
     <delete id="deleteOne">
