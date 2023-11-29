@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div><div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">공간관리시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li ><a href="./sub2_3">출입관리시스템</a></li>
+        <li ><a href="./sub2_4">영상정보시스템</a></li>
+        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+        <li ><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li class="on"><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>공간관리시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            도서관의 모든 공간(스터디룸, 강의실, 시설물)들을 소개 및 안내하고 공간(시설물)을 직접 보지 않고도 사진정보 및 물품정보등을 이용자에게 제공하여 해당 공간의 대관예약신청을 편리하게<br> 도와주는 시스템입니다.
+        </div>
+        <div class="content_main" >
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_9/spc01.png" alt="spacemate1">
+                            <h5>공간관리시스템(이용자)</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_9/spc02.png" alt="spacemate2">
+                            <h5>공간관리시스템(관리자)</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">SpaceMate</span></li>
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 반응형웹기반 이용자 및 관리자시스템</dd>
+                            <dd>2. 그룹스터디룸예약, 강의실예약, 기타 이용시설공간예약</dd>
+                            <dd>3. 예약정책관리, 예약스케줄관리, 휴관일관리, 예약내역통합관리, 알림톡 & SMS 연계</dd>
+                            <dd>4. 공간비치물품관리(빔프로젝트, 노트북, 마이크, 전자칠판 등) 및 신청기능</dd>
+                            <dd>5. 전용앱을 사용하여 비콘시스템과 연계되어 이용자 현장인증 기능</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>통합관리시스템을 제공함으로써 예약자관리, 시설물공간관리, 예약스케쥴관리, 휴관일관리, 도서관리시스템연동, 통합조회기능을 제공하여 도서관 공간관리업무를 효율적으로 증대할 수 있는 시스템입니다.</dd>
+                    </dl>
+                </div>
+            </div><!--
+			<div class="con_area" data-aos-offset="50" data-aos="fade-up">
+				<div class="left_area">주요특징</div>
+				<div class="right_area">
+					<dl>
+						<dd>- 모든 도서관 프로그램 및 회원정보와 연계</dd>
+						<dd>- 손쉬운 터치 스크린 방식의 예약 모듈(터치 스크린 설치 시)</dd>
+						<dd>- 열람실 및 자료실의 사용자 예약</dd>
+					</dl>
+				</div>
+			</div> -->
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">이용자화면</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_9/spacemate1.png" alt="이용자화면"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">관리자화면</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_9/spacemate2.png" alt="관리자화면"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">디지털전자신문</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li ><a href="./sub2_3">출입관리시스템</a></li>
+        <li ><a href="./sub2_4">영상정보시스템</a></li>
+        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+        <li class="on"><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li ><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>디지털전자신문</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            GoodNews는 종이신문의 장점을 살린 다양한 전자신문열람서비스입니다.
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_6/gnews01.png" alt="goodnews">
+                            <h5>디지털전자신문</h5>
+                        </div>
+                        <!-- <div class="nav">
+                            <img src="../..//image/sub/sub2/gate_b.png" alt="게이트">
+                            <h5>출입게이트</h5>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">GoodNews</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 종이신문을 펼쳐놓은 듯한 양면보기 기능</dd>
+                            <dd>2. 사실 같은 페이지 넘김 효과</dd>
+                            <dd>3. 3개월 치 데이터를 GoodNews 하나로 보관 및 열람가능 </dd>
+                            <dd>4. 검색어만 입력하면 즉시 찾아주는 검색기능 </dd>
+                            <dd>5. 오전6시 자동업데이트 자동화로 사서분들의 수작업 감소 </dd>
+                            <dd>6. 주요신문을 비롯한 120여개 신문매체 지원, 디지털 잡지와 연계</dd>
+                            <dd>7. 기관 자체 신문 탑재 가능</dd>
+                        </dl>
+                        <!-- </li>
+                        <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- 기존의 종이신문의 한계를 넘어 터치스크린 장비로 극복, 종이신문의 장점과 편리성을 최대한 살리면서 사용자들로 하여금 </br>&nbsp;&nbsp;최대한 편리하고 쉽게 이용가능하게 만든 전자신문열람서비스입니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">주요특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>-  측면에 설치된 센서(6조)로 통행자 감지
+                        <dd>- 모터방식으로 출입문 구동
+                        <dd>- 화재, 정전시 비상 개방
+                        <dd>- 출입문(Glass Wing)에 승객이 끼었을 시 자동 열림으로 안전성 확보(Option 사항)
+                        <dd>- RF카드 리더, 지문인식 리더, 바코드 리더등과 가능</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- div class="con_area">
+                <div class="left_area">도입효과</div>
+                <div class="right_area">
+                    <dl>
+                        <dt>[사용자]</dt>
+                        <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                        <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                        <dd>- PDP와 SMS 연계</dd>
+                        <dt>[관리자]</dt>
+                        <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                        <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                        <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                        <dd>- 손쉬운 관리 프로그램</dd>
+                    </dl>
+                </div>
+            </div> -->
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_6/gnews03.jpg" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_6/gnews02.jpg" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

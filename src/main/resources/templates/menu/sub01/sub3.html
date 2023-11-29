@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >회사소개</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);'  class="cur">일반현황</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="../../sub1">인사말</a></li>
+                        <li><a href="../../sub2">연혁</a></li>
+                        <li><a href="../../sub3">일반현황</a></li>
+                        <li><a href="../../sub4">사업분야</a></li>
+                        <li><a href="../../sub5">찾아오시는길</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div><div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>일반현황</strong><div class="bottom_border"></div></div>
+        <div class="content_main">
+            <div class="inlineMenu">
+                <ul>
+                    <li class="active" data-id="info">회사개요</li>
+                    <li data-id="operating">조직도</li>
+                    <li data-id="konzession">인증서</li>
+                </ul>
+            </div>
+            <div class="tabs">
+                <div id="info" class="active">
+                    <div class="greet"  data-aos-offset="50" data-aos="fade-up">
+                        <div class="main_rubi">도서관 · 에너지 분야의 새로운 길을 개척하는</div>
+                        <div class="main_con"><font size="" color="#3366cc">The First Developer</font></div>
+                        <div class="sub_rubi"><font size="2" color="">항상 새로운 마음으로 기술개발 및 고객에게 다가가는 회사</font></div>
+                        <div class="sub_con">HODI</div>
+                    </div>
+                    <table class="info" cellspacing="0" cellpadding="0" data-aos-offset="50" data-aos="fade-up">
+                        <tr>
+                            <th>회사명</th>
+                            <td>주식회사 호디</td>
+                        </tr>
+                        <tr>
+                            <th>대표이사</th>
+                            <td>이용훈</td>
+                        </tr>
+                        <tr>
+                            <th>설립일</th>
+                            <td>2004년 2월</td>
+                        </tr>
+                        <tr>
+                            <th>서울본사</th>
+                            <td>서울특별시 강서구 마곡중앙2로 39(마곡동)</td>
+                        </tr>
+                        <tr>
+                            <th>호남지사</th>
+                            <td>전라남도 나주시 우정로 72 더 클래스빌딩 B동 717호</td>
+                        </tr>
+                        <tr>
+                            <th>대표전화</th>
+                            <td>1661-4523</td>
+                        </tr>
+                        <!-- <tr>
+                            <th>주요사업</th>
+                            <td>도서관정보화 솔루션, 개인정보보호 솔루션, 도서관 자동화 솔루션, 도서관 SI사업</td>
+                        </tr> -->
+                    </table>
+                </div>
+                <div id="operating"  >
+                    <div class="organization" data-aos-offset="50" data-aos="fade-up">
+                        <div class="main_rubi"><font size="" color="#0066cc">최고의 팀웍과 조직력으로</font></div>
+                        <div class="main_con">분야별 체계적이고 효과적인 업무를 수행</div>
+                    </div>
+                    <div class="organization_table" data-aos-offset="50" data-aos="fade-up">
+                        <!-- <div class="CEO">대표이사</div>
+                        <div class="organization_table_area">
+                            <ul>
+                                <li class="subject">업무지원팀</li>
+                                <li>
+                                    <dl>
+                                        <dd>가상 CD 인터넷 버전개발</dd>
+                                        <dd>시스템 프로그래밍</dd>
+                                        <dd>Device Driver 프로그래밍</dd>
+                                        <dd>시스템 Utility Program</dd>
+                                        <dd>네트웍/통신프로그램 개발</dd>
+                                        <dd>컴포넌트 SoftWare 개발</dd>
+                                        <dd>보안프로그램 개발</dd>
+                                        <dd>SMS, 메일링 엔진 개발</dd>
+                                        <dd>텔레메틱스 사업</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="organization_table_area">
+                            <ul>
+                                <li class="subject">기술지원팀</li>
+                                <li>
+                                    <dl>
+                                        <dd>응용 Application 개발</dd>
+                                        <dd>데이터베이스 모델링 구축</dd>
+                                        <dd>RDB(Oracle, MS-sql,</dd>
+                                        <dd>MS-mdb) 모든 DB</dd>
+                                        <dd>VBA Application</dd>
+                                        <dd>ATL, ActiveX 모듈 개발</dd>
+                                        <dd>VOD, AOD 프로그램</dd>
+                                        <dd>User Interface</dd>
+                                        <dd>동영상 편집프로그램</dd>
+                                        <dd>실시간 회원증 발급프로그램</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="organization_table_area" id="deps_2">
+                            <ul>
+                                <li class="subject last_sub">기업부설연구소</li>
+                                <li class="organization_2deps_area">
+
+                                    <ul>
+                                        <li class="subject">전력(신재생)연구팀</li>
+                                        <li class="subject">신상품개발팀</li>
+                                        <li class="subject">솔루션개발팀</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dd>홈페이지 구축 및 Site 개발</dd>
+                                        <dd>제품별 상표관리</dd>
+                                        <dd>솔루션 판매 대리점 섭외</dd>
+                                        <dd>해외시장 발굴</dd>
+                                        <dd>전시회 참가</dd>
+                                        <dd>서버장비 및 스토리지 판매</dd>
+                                        <dd>전자도서관 구축</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="organization_table_area">
+                            <ul>
+                                <li class="subject">웹개발팀</li>
+                                <li>
+                                    <dl>
+                                        <dd>웹 / Application 디자인</dd>
+                                        <dd>웹페이지 기획</dd>
+                                        <dd>웹페이지 관리</dd>
+                                        <dd>웹 프로그래밍</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="organization_table_area">
+                            <ul>
+                                <li class="subject"> 전력개발팀</li>
+                                <li>
+                                    <dl>
+                                        <dd>전력량 디자인</dd>
+                                        <dd>전기 기획</dd>
+                                        <dd>전기 관리</dd>
+                                        <dd>전력 프로그래밍</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+                <div id="konzession" >
+                    <div class="konzession_area" >
+                        <ul>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a01.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>기술개발시범기업지정서</dt>
+                                        <dd>중소기업은행</dd>
+                                        <dd>인 증 : 2004.12.10</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a02.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>기업부설연구소 인정서</dt>
+                                        <dd>한국산업기술진흥협회장</dd>
+                                        <dd>인 증 : 2006.10.2</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a03.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>INNO-BIZ 확인서</dt>
+                                        <dd>중소벤처기업부</dd>
+                                        <dd>기 간 : 2019.6.27~2022.6.26</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a04.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>소프트웨어사업자 신고확인서</dt>
+                                        <dd>한국소프트웨어산업협회</dd>
+                                        <dd>인 증 : 2020.4.24</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a05.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>직접생산증명서</dt>
+                                        <dd>중소기업중앙회</dd>
+                                        <dd>인 증 : 2020.11.23</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_a06.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>정보통신공사업등록증</dt>
+                                        <dd>서울특별시장</dd>
+                                        <dd>인 증 : 2009.7.13</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pgm01.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>프로그램등록증(ICMaker)</dt>
+                                        <dd>프로그램심의조정위원회</dd>
+                                        <dd>인 증 : 2005.5.24</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pgm02.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>프로그램등록증(SeatMate)</dt>
+                                        <dd>프로그램심의조정위원회</dd>
+                                        <dd>인 증 : 2005.3.8</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pgm03.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>프로그램등록증(WebGate)</dt>
+                                        <dd>프로그램심의조정위원회</dd>
+                                        <dd>인 증 : 2005.5.23</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pgm04.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>프로그램등록증(NetMedia)</dt>
+                                        <dd>프로그램심의조정위원회</dd>
+                                        <dd>인 증 : 2005.5.24</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pgm05.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>프로그램등록증(LibMate)</dt>
+                                        <dd>프로그램심의조정위원회</dd>
+                                        <dd>인 증 : 2005.2.13</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_gs1.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>소프트웨어품질인증서(GS인증)</dt>
+                                        <dd>한국산업기술시험원</dd>
+                                        <dd>인 증 : 2008.12.15</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_gs2.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>소프트웨어품질인증서(GS인증)</dt>
+                                        <dd>한국정보통신기술협회</dd>
+                                        <dd>인 증 : 2016.9.19</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_iso.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>ISO인증</dt>
+                                        <dd>아이티큐에이인증원</dd>
+                                        <dd>인 증 : 2018.11.22</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pat01.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>특허증</dt>
+                                        <dd>특허청</dd>
+                                        <dd>출 원 : 2018. 09. 06</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <li data-aos-offset="50" data-aos="fade-up">
+                                <div class="img_area">
+                                    <img src="../../image/sub/sub01/sub3/cert_pat02.gif" alt="">
+                                </div>
+                                <div class="txt_area">
+                                    <dl>
+                                        <dt>특허증</dt>
+                                        <dd>특허청</dd>
+                                        <dd>출 원 : 2020. 01. 06</dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

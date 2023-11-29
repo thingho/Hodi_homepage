@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">열람실좌석발급시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li class="on"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li ><a href="./sub2_3">출입관리시스템</a></li>
+        <li ><a href="./sub2_4">영상정보시스템</a></li>
+        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+        <li ><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li ><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>열람실좌석발급시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            제한된 좌석을 보다 효율적으로 관리하여 이용자의 편의성을 증진시키며, 좌석으로 인한 독점 및 분쟁을 해소하여 공간 효율을 극대화 할 수 있는 시스템입니다.
+        </div>
+        <div class="content_main" >
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_1/sm01.png" alt="seatmate1">
+                            <h5>키오스크</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_1/sm02.png" alt="seatmate2">
+                            <h5>키오스크</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">SeatMate</span> <img src="../..//image/sub/sub02/sub2_1/certi_gs.gif" alt="GS 인증제품"></li>
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 좌석관리 배치도 제공</dd>
+                            <dd>2. 좌석관리 및 관리자 프로그램 제공</dd>
+                            <dd>3. 원격제어 기능</dd>
+                            <dd>4. 좌석시간 규정 프로그램</dd>
+                            <dd>5. 홈페이지 및 학사 DB 연동 가능</dd>
+                            <dd>6. 예약 발권 기능</dd>
+                            <dd>7. 대기자 관리 기능</dd>
+                            <dd>8. 이용자 현황 통계 기능</dd>
+                            <dd>9. 출입관리 시스템 연동 기능</dd>
+                        </dl>
+                    </li>
+                    <li><strong>[가로형 키오스크]</strong> &nbsp;&nbsp; <a href="https://www.g2b.go.kr:8092/sm/pp/goods/SMPPGoodsDtlInfo.do?cntrctGoodsMngNo=002061279022&exmalNo=&brnchoffcCd=&mnThngCtgryCd=&serviceExmalYn=&shopCntrctSn=&srchFd=&srchMthSe=S&kwd=%C8%A3%B5%F0" target="_blank" class="btn btn_blue">나라장터 바로가기</a> &nbsp;&nbsp;<span>물품식별번호 <font color="red">23598522</font></span></li>
+                    <li><strong>[세로형 키오스크]</strong> &nbsp;&nbsp; <a href="https://www.g2b.go.kr:8092/sm/pp/goods/SMPPGoodsDtlInfo.do?cntrctGoodsMngNo=002061279021&exmalNo=&brnchoffcCd=&mnThngCtgryCd=&serviceExmalYn=&shopCntrctSn=&srchFd=&srchMthSe=S&kwd=%C8%A3%B5%F0" target="_blank" class="btn btn_blue">나라장터 바로가기</a> &nbsp;&nbsp;<span>물품식별번호 <font color="red">22058389</font></span></li>
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">주요특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- 모든 도서관 프로그램 및 회원정보와 연계</dd>
+                        <dd>- 손쉬운 터치 스크린 방식의 예약 모듈(터치 스크린 설치 시)</dd>
+                        <dd>- 열람실 및 자료실의 사용자 예약</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">도입효과</div>
+                <div class="right_area">
+                    <dl>
+                        <dt><font  color="#0066cc">[사용자]</font></dt>
+                        <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악, 좌석의 효율적인 이용, 누구나 손쉽게 이용 가능</dd>
+                        <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                        <dd>- PDP와 SMS 연계</dd>
+                        <dt><font  color="#0066cc">[관리자]</font></dt>
+                        <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                        <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                        <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                        <dd>- 손쉬운 관리 프로그램</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_1/sm03.png" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">구성도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_1/sm04.jpg" alt="구성도"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

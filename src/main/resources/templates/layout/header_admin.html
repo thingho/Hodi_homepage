@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<div th:fragment="header" class="header">
+    <script>
+        if("[[${session.sessionId}]]" == ""){
+            alert("잘못된 접근입니다.");
+            location.href="../../../index";
+        }
+        if("[[${session.sessionId}]]" != "" && "[[${session.sessionId}]]" != "admin"){
+            alert("권한이 없습니다.");
+            location.href="../../../index";
+        }
+
+        function logoutBtn(){
+            var conf = confirm("로그아웃 하시겠습니까?")
+            if(conf){
+                alert("로그아웃 되었습니다.");
+                location.href="/logout";
+            }else{
+                return false;
+            }
+        }
+    </script>
+    <a href="../../../index" class="logo">
+        <img src="../../..//image/logo.gif" alt="HODI">
+    </a>
+    <a th:if="${session.sessionId != null}" href="../../../admin" class="login_logo">
+        <img src="../../..//image/logout.png" alt="logout">
+    </a>
+    <div class="navContainer transform">
+        <div class="borderline"></div>
+        <div class="navigation">
+            <ul>
+                <li >
+                    <a href="#">POPUP</a>
+                    <ul>
+                        <li><a href="../../../admin/popup/list_popup">POPUP 목록</a></li>
+                        <li><a href="../../../admin/popup/write_popup">POPUP 생성</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#">공지사항</a>
+                    <ul>
+                        <li><a href="#">공지사항글 작성</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#">뉴스소식</a>
+                    <ul>
+                        <li><a href="../../../menu/community/news/write_news">뉴스글 작성</a></li>
+                    </ul>
+                </li>
+        </div>
+    </div>
+</div>

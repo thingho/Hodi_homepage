@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">무인솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">노트북대출반납시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub1_1">노트북대출반납시스템</a></li>
+                        <li ><a href="./sub1_2">비대면무인회원증발급시스템</a></li>
+                        <li ><a href="./sub1_3">무인스터디카페</a></li>
+                        <li ><a href="./sub1_4">독서실관리프로그램</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li class="on"><a href="./sub1_1">노트북대출반납시스템</a></li>
+        <li ><a href="./sub1_2">비대면 무인회원증발급시스템</a></li>
+        <li ><a href="./sub1_3">무인스터디카페</a></li>
+        <li ><a href="./sub1_4">독서실관리프로그램</a></li>
+        <!-- <li class="on"><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>노트북대출반납시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            이용자가 키오스크에서 손쉽게 노트북 예약이 가능하고 효율적인 노트북 예약관리가 가능한 셀프 노트북대출반납시스템
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub1_1/sp_img_note01.png" alt="노트북대출반납시스템">
+                            <h5>노트북대출반납시스템</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub1_1/sp_img_note02.png" alt="노트북대출반납시스템은시스템">
+                            <h5>노트북대출반납시스템</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">Self LaptopMate</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 노트북 자동 잠금/해제 기능으로 보안성 증대</dd>
+                            <dd>2. 음성안내 기능으로 보다 손쉬운 대여 반납</dd>
+                            <dd>3. 배터리 용량 실시간 체크 기능으로 효율적인 노트북관리 </dd>
+                            <dd>4. SMS 대여 반납 안내 기능으로 정확한 대여 반납 안내</dd>
+                            <dd>5. 보안카메라 장착으로 노트북 분실방지</dd>
+                        </dl>
+                    </li>
+                    <li><a href="https://www.g2b.go.kr:8092/sm/pp/goods/SMPPGoodsDtlInfo.do?cntrctGoodsMngNo=002061279026&exmalNo=&brnchoffcCd=&mnThngCtgryCd=&serviceExmalYn=&shopCntrctSn=&srchFd=&srchMthSe=S&kwd=%C8%A3%B5%F0"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">24721654</font></span></li>
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- 노트북대출반납시스템은 키오스크로 손쉬운 이용자 예약이 가능합니다. </dd>
+                        <dd>- 장소 제약 없이 도서관 내 어디든 노트북 이용장소로 활용 가능합니다.</dd>
+                        <dd>- 노트북대출반납시스템은 효율적인 노트북 예약관리가 가능합니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">제품 특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>a. 32인치 대형 터치 모니터 장착으로  손쉬운 대여 반납</dd>
+                        <dd>b. 키오스크내부 120도 보안카메라 장착으로 도난방지 효과</dd>
+                        <dd>c. 노트북배터리 실시간 체크 기능으로 효율적 대여</dd>
+                    </dl>
+                </div>
+            </div>
+
+
+
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub1_1/sp_img_note03.png" alt="제품규격"></dd>
+                    </dl>
+                </div>
+            </div>
+
+
+            <!-- <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">사이트</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>인천심곡어린이도서관</dd>
+                        <dd>전라남도립도서관</dd>
+                        <dd>충청남도대표도서관</dd>
+                        <dd>남양주시립정약용도서관</dd>
+                        <dd>김포시립마산도서관</dd>
+                        <dd>용인시성복도서관</dd>
+                        <dd>서울시교육청송파도서관</dd>
+                        <dd>오산시초평도서관</dd>
+                        <dd>포천시립중앙도서관</dd>
+                        <dd>김포시립장기도서관</dd>
+                        <dd>김포시립풍무도서관</dd>
+                        <dd>국립세종도서관</dd>
+                        <dd>용인시서농도서관</dd>
+                        <dd>용인시수지도서관</dd>
+                    </dl>
+                </div>
+                </div>
+            </div> -->
+
+
+
+
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<div class="footer">
+    <div class="copylight">
+        <div class="footer_wrap">
+            <ul class="left_footer">
+                <li>서울본사 : (07806) 서울특별시 강서구 마곡중앙2로 39(마곡동)</li>
+                <li>호남지사 : (58217) 전라남도 나주시 우정로 72 더 클래스빌딩 B동 717호</li>
+                <li>고객문의 : 1661-4523 / FAX 070-4620-8088</li>
+            </ul>
+            <ul class="right_footer">
+                <li>기술지원 : 1661-4523</li>
+                <li>도입문의 : orange@hodi.co.kr</li>
+                <li>사업자등록번호 : 110-81-64955</li>
+                <li><!-- <a href="">개인정보처리방침</a> --></li>
+            </ul>
+            <div class="bottom_footer">
+                COPYLIGHT ⓒ 2021 HODI. ALL RIGHTS RESERVED
+            </div>
+        </div>
+
+        <a value=" " class="top_button"> </a>
+    </div>
+</div>
+</body>
+</html>

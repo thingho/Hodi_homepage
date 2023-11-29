@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/index">HOME</a></li>
+
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >회사소개</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);'  class="cur">인사말</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="../../sub1">인사말</a></li>
+                        <li><a href="../../sub2">연혁</a></li>
+                        <li><a href="../../sub3">일반현황</a></li>
+                        <li><a href="../../sub4">사업분야</a></li>
+                        <li><a href="../../sub5">찾아오시는길</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div><div class="main_wrap">
+    <div class="content" >
+        <div class="content_title"><strong>인사말</strong><div class="bottom_border"></div></div>
+        <div class="content_main" data-aos-offset="50" data-aos="fade-up">
+            <div class="greeting">
+                <dl class="first_message">
+                    <!-- <dd>Message</dd> -->
+                    <dd>호디의 기술개발과 고객만족은 더 나은 내일을 위한 약속입니다.</dd>
+                </dl>
+                <dl class="second_message">
+                    <dd>전자도서관구축 / 전자도서관 소프트웨어개발 / 서버 및 Network구축 / 도서관 자동화장비</dd>
+                    <dd>전력수요분석 / 전력수요예측 / Fast DR(고속수요반응) / 빌딩에너지관리</dd>
+                </dl>
+            </div>
+
+            <ul class="greeting_text" data-aos-offset="50" data-aos="fade-up">
+                <h3><font style="color:rgb(3, 85, 167);">(주)호디 홈페이지에 방문하신 것을 진심으로 환영합니다.</font></h3>
+                <br>
+                ㈜ HODI는 "전자도서관소프트웨어개발 및 전력분야 소프트웨어 개발 전문업체입니다.<br>
+                도서관 및 연구소 등에 새로운 솔루션을 연구개발하고 있으며, 도서관 분야 및 전력분야의 기술력을 확보하고 있습니다.<br><br>
+
+                전력분야의 새로운 기술을 적용하여 빅데이터 분석 및 머신러닝을 이용한 전력수요예측, 전력수요관리, Fast DR(고속수요반응), 빌딩에너지관리등에 대한 연구를 수행하고 있습니다.<br><br>
+
+                ㈜ HODI는 항상 새로운 마음으로 기술개발 및 고객을 생각하는 회사가 되도록 노력하겠습니다.
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

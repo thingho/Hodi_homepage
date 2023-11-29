@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back3">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >전력사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">전력수요분석시스템</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">전력수요분석시스템</a></li>
+                        <li><a href="./sub2_1">전력수요예측시스템</a></li>
+                        <li><a href="./sub3_1">Fast DR(고속수요반응)</a></li>
+                        <li><a href="./sub4_1">빌딩에너지관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>전력수요분석시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis">
+
+        </div>
+        <div class="content_main">
+            <div class="con_area " data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">실적분석</div>
+                <div class="right_area">
+                    <dl>
+                        <dd ><div class="area_subject">수요실적분석</div></dd>
+                        <dd class="img_area">
+                            <img src="../..//image/sub/sub03/sub1_1/elec_anal1.jpg" alt="수요실적분석1"> <img src="../..//image/sub/sub03/sub1_1/elec_anal2.jpg" alt="수요실적분석2">
+                        </dd>
+                        <dd>실적분석(수요실적) 부분은 오차발생원인 및 다양한 기능을 포함하고 있으며 챠트를 통해 관리자가 직관적으로 분석할 수 있도록 <br>구성됨</dd>
+                        <dd></dd>
+                        <dd>
+                            <ul>
+                                <li ><div class="area_subject">실적비교분석</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal3.jpg" alt="실적비교분석"></li>
+                                <li>실적 비교분석 화면- 기준일, 비교일 선택 후 해당일에 대한 오차 및 편차등에 대한 비교, 지역별, 업종별 비교 데이터를 수치로 표현함</li>
+                            </ul>
+                            <ul>
+                                <li ><div class="area_subject">기간별 패턴 비교분석</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal4.jpg" alt="기간별 패턴 비교분석"></li>
+                                <li>기간별 다양한 요소에 대한 패턴을 비교 분석해 볼 수<br> 있도록 하는 화면</li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>
+                                <li ><div class="area_subject">냉/난방 전력수요분석</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal5.jpg" alt="냉/난방 전력수요분석"></li>
+                            </ul>
+                            <ul>
+                                <li ><div class="area_subject">유사기상일 검색</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal6.jpg" alt="유사기상일 검색"></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">전력수요분석시스템</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>
+                            <ul>
+                                <li ><div class="area_subject">전력수요 및 기상대시보드</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal7.jpg" alt="전력수요 및 기상대시보드"></li>
+                                <li>대시보드 통합(전력+기상)</li>
+                            </ul>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>
+                                <li ><div class="area_subject">기상정보 대시보드</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal8.jpg" alt="기상정보 대시보드"></li>
+                                <li>대시보드 통합(기상)</li>
+                            </ul>
+                            <ul>
+                                <li ><div class="area_subject">전력수요 대시보드</div></li>
+                                <li><img src="../..//image/sub/sub03/sub1_1/elec_anal9.jpg" alt="전력수요 대시보드"></li>
+                                <li>대시보드(전력)-지역별, 대수용가별</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- <div class="con_area">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub2/sm03.jpg" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="zoom-in-left">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub2/unman_self02.jpg" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div-->
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<div class="footer">
+    <div class="copylight">
+        <div class="footer_wrap">
+            <ul class="left_footer">
+                <li>서울본사 : (07806) 서울특별시 강서구 마곡중앙2로 39(마곡동)</li>
+                <li>호남지사 : (58217) 전라남도 나주시 우정로 72 더 클래스빌딩 B동 717호</li>
+                <li>고객문의 : 1661-4523 / FAX 070-4620-8088</li>
+            </ul>
+            <ul class="right_footer">
+                <li>기술지원 : 1661-4523</li>
+                <li>도입문의 : orange@hodi.co.kr</li>
+                <li>사업자등록번호 : 110-81-64955</li>
+                <li><!-- <a href="">개인정보처리방침</a> --></li>
+            </ul>
+            <div class="bottom_footer">
+                COPYLIGHT ⓒ 2021 HODI. ALL RIGHTS RESERVED
+            </div>
+        </div>
+
+        <a value=" " class="top_button"> </a>
+    </div>
+</div>
+</body>
+</html>

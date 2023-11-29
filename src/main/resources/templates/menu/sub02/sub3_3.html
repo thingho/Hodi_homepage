@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+    <div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">모바일솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">모바일솔루션</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub3_1">모바일앱</a></li>
+                        <li ><a href="./sub3_2">모바일학생증</a></li>
+                        <li ><a href="./sub3_3">모바일솔루션</a></li>
+                        <li ><a href="./sub3_4">카카오알림톡</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub3_1">모바일앱</a></li>
+        <li ><a href="./sub3_2">모바일학생증</a></li>
+        <li class="on"><a href="./sub3_3">모바일솔루션</a></li>
+        <li ><a href="./sub3_4">카카오알림톡</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>모바일솔루션</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            모바일학생증은 출입인증, 공간이용인증, 지불인증을 통해 학내시설을 편리하게 이용할 수 있을 뿐만 아니라 스마트폰으로 실시간 공간이용 신청/예약이 가능합니다.
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_3/ms01.jpg" alt="모바일">
+                            <h5>모바일솔루션</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_3/ms01a.jpg" alt="모바일앱">
+                            <h5>모바일앱</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_3/ms01b.jpg" alt="시설예약화면">
+                            <h5>시설예약화면</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">Mobile Solution</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 통합좌석관리시스템 모바일 서비스 구성</dt>
+                            <dd>2. 실시간 열람실현황조회</dt>
+                            <dd>3. 나의 발급현황 조회</dt>
+                            <dd>4. 모바일예약정보서비스</dt></br>
+                            <dd>5. 대학내의 E-book 및 강의 동영상 연계</dt>
+                            <dd>6. 나의 대출 상태 조회</dt>
+                            <dd>7. 나의 대출 이력 조회</dt>
+                            <dd>8. 자료대출 및 반납서비스</dt>
+                            </dd>
+                        </dl>
+                        <!-- </li>
+                        <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><strong>모바일학생지원시스템</strong>이란 기존의 학생증 ID를 모바일바코드(QR코드)형태와 NFC 형태로 휴대폰에 발급하여 학생증 대용으로<br> 사용하는 앱 서비스 입니다.  학생지원 앱은 모바일학생증, 메세징 Push, 좌석배정, 전자출결, 실시간 정보로 구성되어 있습니다.  <br>또한 대학생활의 편의 서비스를 이용할 수 있으며 다양한 푸쉬서비스를 통해 학생들에게 메시지를 보내고 그룹별/과별/개인별<br> 메시지 전송이 무상으로 이루어 질 수 있도록 되어 있습니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- <div class="con_area">
+                <div class="left_area">보안</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- QR코드는 국제표준코드이지만 도용의 가능성이 있습니다.
+따라서 도용을 최대한 방지하기 위해서 은행의 OTP코드와 같은 난수발생을 통한 코드변환을 통해 앱 구동시마다 QR코드를 변환함으로서 보안성을 높입니다.
+
+                        <dt>1. 모바일학생증 ID 구성</dt>
+                        <dd>학번 + 차수 + OTP코드</dd>
+                        <dd>*  OTP코드란 One Time Password</dd><br>
+
+                        <dt>2. 모바일학생증을 복사할 경우</dt>
+                        <dd>모바일학생증 구동시 매번 다른 OPT 보안 코드 생성으로 복사해도 사용불가</dd><br>
+
+                        <dt>3. 모바일학생증을 임의로 만들 경우</dt>
+                        <dd>모바일학생증 구동시 매번 다른 OTP보안 코드 생성으로 인증 사용불가</dd><br>
+
+                        <dt>4. ID와 PW를 분실했을 경우</dt>
+                        <dd>최초 어플 구동 시 모바일학생증 인증서버와의 통신을 통해 등록된 휴대폰 번호와 일치하는지를 체크하여, 개인인증을 통해 본인 휴대폰서만 구동 되도록 구현</dd><br>
+
+                        <dt>5. 물리적 보안</dt>
+                        <dd>기존 게이트나 인증단말기에서 같은 ID는 한 개만 인증 처리</dd>
+                    </dl>
+                </div>
+            </div> -->
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub3_3/ms03.jpg" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- <div class="con_area">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub3/sm03.jpg" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area">
+                <div class="left_area">시스템활용</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub2/mobile_id_qr03.jpg" alt="시스템활용"></dd>
+                    </dl>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

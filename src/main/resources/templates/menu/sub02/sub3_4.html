@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">모바일솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">카카오알림톡</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub3_1">모바일앱</a></li>
+                        <li ><a href="./sub3_2">모바일학생증</a></li>
+                        <li ><a href="./sub3_3">모바일솔루션</a></li>
+                        <li ><a href="./sub3_4">카카오알림톡</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub3_1">모바일앱</a></li>
+        <li ><a href="./sub3_2">모바일학생증</a></li>
+        <li ><a href="./sub3_3">모바일솔루션</a></li>
+        <li class="on"><a href="./sub3_4">카카오알림톡</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>카카오알림톡</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            도서관에서 발송하는 대출·반납 관련 문자 메시지(SMS)를 카카오톡 앱을 통해 제공합니다.
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_4/kakao01.png" alt="카카오알림톡">
+                            <h5>카카오알림톡</h5>
+                        </div>
+                        <!-- <div class="nav">
+                            <img src="../..//image/sub/sub2/ms01a.jpg" alt="카카오알림톡">
+                            <h5>모바카카오알림톡일앱</h5>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div> -->
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">카카오알림톡</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 열람실 좌석배치도 연계 알림</dt>
+                            <dd>2. 다양한 도서관정보 추가 가능(반납예정일 / 대출도서 연체안내 / </dt>
+                            <dd>상호대차 및 예약도서안내/ 희망도서 안내 / 문화행사프로그램 등)</dt>
+                            <dd>3. 좌석배정 알림</dt>
+                            <dd>4. 좌석 연장시간, 퇴실시간 알림</dt>
+                            <dd>5. 좌석 예약배정 알림</dt></br>
+                            </dd>
+                        </dl>
+                        <!-- </li>
+                        <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>도서관에 관련된 안내 메시지를 기존 문자(SMS)가 아닌 카카오톡으로 받아볼 수 있는 서비스입니다. </dd>
+                        <dd>알림톡 서비스는 인증된 도서관 프로필만을 이용하여 메시지를 발송하므로 스팸이나 스미싱 등에서 보호됩니다.</dd>
+                        <dd> 또한 글자 수 제한이 있는 문자메시지와 달리 자세한 책 정보를 안내할 수 있습니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">주요특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dt><font  color="#3366cc">1) 알림톡 서비스</font></dt>
+                        <dd>: 다양한 공지사항 및 이용안내에 대하여 알림 메시지를 전송하고 다양한 정보전달</dd></br>
+                        <dt><font  color="#3366cc">2) SMS 대체서비스</font></dt>
+                        <dd>: 카카오톡 메시지 발송으로 문자 메시지보다 수신율이 높임</dd></br>
+                        <dt><font  color="#3366cc">3) 좌석열람실 배정 서비스</font></dt>
+                        <dd>: 배정표 발급없이 모바일 알림톡으로 수신가능</dd></br>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub3_4/kakao01_a.png" alt="장점"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

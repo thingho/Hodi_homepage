@@ -8,16 +8,16 @@
 
 	src:url("../font/SJGB.ttf") format("truetype");
 
-	font-style:normal;  /* ì„ íƒì†ì„± */
+	font-style:normal;  /* 선택속성 */
 
-	font-weight:normal;  /* ì„ íƒì†ì„± */
+	font-weight:normal;  /* 선택속성 */
 
 }     
 @font-face { 
 	font-family:"gwangju";  
-	font-weight:normal;  /* ì„ íƒì†ì„± */
-	font-style:500;  /* ì„ íƒì†ì„± */
-     src:local(â€»),  /* ìƒëžµ ê°€ëŠ¥ */ 
+	font-weight:normal;  /* 선택속성 */
+	font-style:500;  /* 선택속성 */
+     src:local(※),  /* 생략 가능 */ 
      url("../font/gwangju_medium.ttf") format("truetype"),
      url("../font/gwangju_medium.otf") format("opentype"),
      url("../font/gwangju_medium.woff") format("woff"),
@@ -25,9 +25,9 @@
 }     
 @font-face { 
 	font-family:"gwangju";  
-	font-weight:normal;  /* ì„ íƒì†ì„± */
-	font-style:300;  /* ì„ íƒì†ì„± */
-     src:local(â€»),  /* ìƒëžµ ê°€ëŠ¥ */ 
+	font-weight:normal;  /* 선택속성 */
+	font-style:300;  /* 선택속성 */
+     src:local(※),  /* 생략 가능 */ 
      url("../font/gwangju_light.ttf") format("truetype"),
      url("../font/gwangju_light.otf") format("opentype"),
      url("../font/gwangju_light.woff") format("woff"),
@@ -38,7 +38,7 @@
 	font-family:"gwangju";  
 	font-weight:normal; 
 	font-style:700;  
-     src:local(â€»),  
+     src:local(※),  
      url("../font/gwangju_bold.ttf") format("truetype"),
      url("../font/gwangju_bold.otf") format("opentype");
 }     
@@ -78,19 +78,29 @@ a:link, a:visited, a:active{
 	margin-top: 15px;
 	z-index: 999;
 }
-.header .login_logo {
-	margin-left: 1850px;
-	margin-top: 25px;
-	z-index: 999;
-	cursor: pointer;
-}
-
 .header .logo div{
 	width: 400px;
 	position: fixed;
 	top: 30px;
 	left: 265px;
 	font-size:1.1em
+}
+.header .logo img{
+	z-index: 999;
+}
+
+
+.logo {
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+.header .login_logo {
+	margin-left: 1850px;
+	margin-top: 25px;
+	z-index: 999;
+	cursor: pointer;
 }
 .header .login_logo div{
 	width: 400px;
@@ -99,21 +109,9 @@ a:link, a:visited, a:active{
 	right: 265px;
 	font-size:1.1em
 }
-
-.header .logo img{
-	z-index: 999;
-}
-
 .header .login_logo img{
 	z-index: 999;
 }
-
-.logo {
-	position: absolute;
-	left: 0;
-	z-index: 1;
-}
-
 .login_logo {
 	position: absolute;
 	left: 0;
@@ -248,7 +246,6 @@ a:link, a:visited, a:active{
 	color:white;
 }
 
-
 /*게시판 table*/
 .board_list{
 	display: flex;
@@ -257,7 +254,7 @@ a:link, a:visited, a:active{
 }
 
 
-@media screen and(max-width: 1280px) {
+@media (max-width: 1280px) {
 	.logo{
 	}
 	.navContainer{

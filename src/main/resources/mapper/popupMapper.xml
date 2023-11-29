@@ -1,0 +1,55 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.hodipg.mapper.PopupMapper">
+    <select id="selectAll" resultType="com.java.hodipg.dto.PopupDto" parameterType="map">
+        select * from popup
+        <if test="category == 'all'">
+            where ptitle like concat('%',#{word},'%') or pcontent like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ptitle'">
+            where ptitle like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'pcontent'">
+            where pcontent like concat('%',#{word},'%')
+        </if>
+        order by pno
+        limit #{startRow}, 10
+    </select>
+
+    <select id="selectListCount" resultType="int">
+        select count(*) from popup
+        <if test="category == 'all'">
+            where ptitle like concat('%',#{word},'%') or pcontent like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'ptitle'">
+            where ptitle like concat('%',#{word},'%')
+        </if>
+        <if test="category == 'pcontent'">
+            where pcontent like concat('%',#{word},'%')
+        </if>
+    </select>
+
+    <select id="selectOne" resultType="com.java.hodipg.dto.PopupDto">
+        select * from popup where pno=#{pno}
+    </select>
+
+    <insert id="insertOne">
+        insert into popup (name, ptitle, pcontent, pdate, pfile, pshow)
+        values (#{name}, #{ptitle},#{pcontent}, now(), #{pfile}, #{pshow});
+    </insert>
+
+    <delete id="deleteOne">
+        delete from popup where pno=#{pno}
+    </delete>
+
+    <update id="updateOne">
+        update popup set
+        ptitle=#{ptitle},pcontent=#{pcontent},pfile=#{pfile},pshow=#{pshow} where pno=#{pno}
+    </update>
+
+    <select id="selectPopup" resultType="com.java.hodipg.dto.PopupDto">
+        select * from popup
+    </select>
+
+</mapper>

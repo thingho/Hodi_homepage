@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">영상정보시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li><a href="./sub2_3">출입관리시스템</a></li>
+        <li class="on"><a href="./sub2_4">영상정보시스템</a></li>
+        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+        <li ><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li ><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>영상정보시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            영상정보시스템은 관공서나 도서관 내의 알림정보 및 광고를 효율적으로 전달하기 위한 시스템입니다.
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_4/es01.png" alt="영상정보디스플레이">
+                            <h5>영상정보시스템</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub2_4/es02.png" alt="eScreen">
+                            <h5>eScreen화면</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">eScreen</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 전체 시스템 운영을 TCP/IP제어를 통한 디지털화 구성 </dd>
+                            <dd>2. 셋탑박스에 운영시스템 탑재, 각 장비의 IP부여 </dd>
+                            <dd>3. 입력되는 다양한 컨텐츠 들에 대해 다양한 효과 구현 선명한 화질  보장 </dd>
+                            <dd>4. 다양한 컨텐츠 구성을 위해 그룹별 컨텐츠 관리 및 화면 편집제공</dd>
+                            <dd>&nbsp;&nbsp;(PPT, jpg, gif, bmp, swf, avi, mpeg, asf, wmv등 다양한 파일지원) </dd>
+                            <dd>5. 클라이언트 그룹별 제어를 위한  스크린을 통한 인터렉티브 방식의  정보제공 가능 </dd>
+                            <dd>6. 도서관의 추천도서, 공지사항등과의 연결가능, 실시간 뉴스등과의 연계</dd>
+                            <dd>7. 각 장비의 동작이력, 현 상태, 이상유무, 클라이언트 모니터링</dd>
+                        </dl>
+                        <!-- </li>
+                        <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- 공공기관, 학교, 공공도서관  내의 알림정보 및 광고를 효과적으로 전달하기 위한 시스템입니다.
+                        <dd>- 체계적이고 효율적인 종합안내시스템 구축 및 설치하여 대학교 내의 행사정보 및 학생정보등 각종 테이터를 실시간으로 전송,<br>&nbsp;&nbsp;전송된 정보를 시각적으로 표출하여 안내판 내에 정보들이 표출될 수 있도록 구성합니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <!--div class="con_area">
+                <div class="left_area">주요특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>-  측면에 설치된 센서(6조)로 통행자 감지
+                        <dd>- 모터방식으로 출입문 구동
+                        <dd>- 화재, 정전시 비상 개방
+                        <dd>- 출입문(Glass Wing)에 승객이 끼었을 시 자동 열림으로 안전성 확보(Option 사항)
+                        <dd>- RF카드 리더, 지문인식 리더, 바코드 리더등과 가능</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area">
+                <div class="left_area">도입효과</div>
+                <div class="right_area">
+                    <dl>
+                        <dt>[사용자]</dt>
+                        <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                        <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                        <dd>- PDP와 SMS 연계</dd>
+                        <dt>[관리자]</dt>
+                        <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                        <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                        <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                        <dd>- 손쉬운 관리 프로그램</dd>
+                    </dl>
+                </div>
+            </div>-->
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_4/es02.jpg" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub2_4/es03.jpg" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

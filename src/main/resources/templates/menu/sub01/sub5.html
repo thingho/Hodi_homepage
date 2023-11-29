@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >회사소개</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);'  class="cur">찾아오시는길</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="../../sub1">인사말</a></li>
+                        <li><a href="../../sub2">연혁</a></li>
+                        <li><a href="../../sub3">일반현황</a></li>
+                        <li><a href="../../sub4">사업분야</a></li>
+                        <li><a href="../../sub5">찾아오시는길</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div><script type="text/javascript" src="/dapi.kakao.com/v2/maps/sdk.js?appkey=7278460520736fa7d7dff3797c3ceb47"></script>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>찾아오시는길</strong><div class="bottom_border"></div></div>
+        <div class="content_main">
+            <div class="inlineMenu">
+                <ul>
+                    <a href="./sub5"><li class="active" >본사</li></a>
+                    <a href="./sub5_2"><li >지사</li></a>
+                </ul>
+            </div>
+            <div id="head_office" >
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div style="width:100%;height:600px;" data-aos-offset="50" data-aos="fade-up" id="map" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                <table class="info roadinfo" cellspacing="0" cellpadding="0" data-aos-offset="50" data-aos="fade-up">
+                    <tr>
+                        <th>본사주소</th>
+                        <td><strong>주소</strong> (07806) 서울특별시 강서구 마곡중앙2로 39(마곡동) <strong>전화</strong> 1661-4523  <strong> 팩스</strong> 070-4620-8088</td>
+                    </tr>
+                    <tr>
+                        <th>지하철</th>
+                        <td>5호선 마곡역 4번출구, 발산역 8번출구 도보 10분거리</td>
+                    </tr>
+                    <tr>
+                        <th>버스</th>
+                        <td><strong>간선</strong> 601, 605, 654<strong>직행</strong> 3000  <strong>지선</strong> 6630, 6645   <strong>일반</strong> 1002, 60, 60-3, 88</td>
+                    </tr>
+                    <tr>
+                        <th>승용차</th>
+                        <td><strong>네비게이션</strong> 서울시 강서구 마곡중앙2로 39</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 3. 실행 스크립트 -->
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(37.5579, 126.8312), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 마커가 표시될 위치입니다
+        var markerPosition  = new kakao.maps.LatLng(37.5579, 126.8312);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        var iwContent = '<div style="width:150px;text-align:center;padding:5px;font-weight: 600;font-size: 12px;color: #000;">호디 본사지점</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition = new kakao.maps.LatLng(37.5579, 126.8312); //인포윈도우 표시 위치입니다
+
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            position : iwPosition,
+            content : iwContent
+        });
+
+        // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+        infowindow.open(map, marker);
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <!--하단 footer-->
+    <div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html><!-- * 카카오맵 - 지도퍼가기 -->

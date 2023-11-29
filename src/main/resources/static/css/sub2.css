@@ -131,7 +131,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, bo
 
 }
 .sub_title .sub_wrap .main_text:before , .sub_title .sub_wrap .sub_text:before{
-	content:"â–¼";
+	content:"▼";
 	position:absolute;
 	right: 25px;
 }
@@ -504,7 +504,7 @@ li div.area_subject{
 	height: 310px;
 	margin-top: 45px;
 	position: relative;
-	background-image:url("../image/sub/sub1/bg_greet.png");
+	background-image:url("../image/sub/sub01/sub1/bg_greet.png");
 	background-repeat:no-repeat;
 	margin-bottom: 15px !important;
 
@@ -572,7 +572,7 @@ li div.area_subject{
 	height: 330px;
 	margin-top: 45px;
 	position: relative;
-	background-image:url("../image/sub/sub1/situ1.png"),url("../image/sub/sub1/situ2.png");
+	background-image:url("../image/sub/sub01/sub3/situ1.png"),url("../image/sub/sub01/sub3/situ2.png");
 	background-repeat:no-repeat;
 	background-position:left, right bottom;
 }
@@ -642,6 +642,7 @@ table.info tr th{
 	padding: 20px;
 }
 table.info tr td{
+	padding: 20px;
 	padding-left: 25px;
 	color:#999;
 }
@@ -652,7 +653,7 @@ table.info tr td{
 	height: 330px;
 	margin-top: 45px;
 	position: relative;
-	background-image:url("../image/sub/sub1/situ3.png");
+	background-image:url("../image/sub/sub01/sub3/situ3.png");
 	background-repeat:no-repeat;
 	background-position: right ;
 }
@@ -898,7 +899,7 @@ table.info tr td{
 	color:rgb(248, 147, 29);
 }
 .idia_details dl dt#idia1:before{
-	background-image:url("../image/sub/sub1/busi_a01.png");
+	background-image:url("../image/sub/sub01/sub4/busi_a01.png");
 	background-repeat:no-repeat;
 	background-size:60px 60px;
 	width: 60px;
@@ -909,7 +910,7 @@ table.info tr td{
 	bottom: 40px;
 }
 .idia_details dl dt#idia2:before{
-	background-image:url("../image/sub/sub1/busi_b02.png");
+	background-image:url("../image/sub/sub01/sub4/busi_b02.png");
 	background-repeat:no-repeat;
 	background-size:60px 60px;
 	width: 60px;
@@ -920,7 +921,7 @@ table.info tr td{
 	bottom: 40px;
 }
 .idia_details dl dt#idia3:before{
-	background-image:url("../image/sub/sub1/busi_c03.png");
+	background-image:url("../image/sub/sub01/sub4/busi_c03.png");
 	background-repeat:no-repeat;
 	background-size:60px 60px;
 	width: 60px;
@@ -1047,7 +1048,6 @@ table.info tr td{
 .board_con .board_list ul li .btn_area:hover{
 	color:#2c7cdd;
 }
-
 .board_con .board_list ul li a dl dd{
 	line-height: 24px;
 	overflow: hidden;
@@ -1067,7 +1067,6 @@ table.info tr td{
 .board_con .write_button a:hover{
 	color:#2c7cdd;
 }*/
-
 
 .board_con .board_write{
 	border-top:2px solid black;
@@ -1211,7 +1210,6 @@ table.info tr td{
 	height: 850px;
 }
 /**/
-
 .board_con .board_view dl dd.con_img{
 	border:none;
 }
@@ -1257,14 +1255,14 @@ table.info tr td{
 	background-color:#ededed;
 }
 .board_con .prev_next li div.np strong.next:after{
-	content:"â–²";
+	content:"▲";
 	font-size:8pt;
 	position: relative;
 	bottom: 3.5px;
 	left: 5px;
 }
 .board_con .prev_next li div.np strong.prev:after{
-	content:"â–¼";
+	content:"▼";
 	font-size:8pt;
 	position: relative;
 	bottom: 3.5px;
@@ -1435,4 +1433,57 @@ table.info tr td{
 }
 .login .login_form button[type=submit]:hover,button[type=button]:hover{
 	color:#0053a5
+}
+
+
+/*popup 수정*/
+.board_con .popup_view{
+	border-top:2px solid black;
+}
+.board_con .popup_view dl dt, .board_con .popup_view dl dd{
+	border-bottom:1px solid #eee;
+	padding: 25px 20px;
+}
+.board_con .popup_view dl .content{
+	border-bottom:1px solid #eee;
+	padding: 25px 20px;
+	font-size:15pt;
+	line-height: 2;
+}
+.board_con .popup_view dl dt{
+	font-size:16pt;
+	font-weight: bold;
+}
+.board_con .popup_view dl .title{
+	font-size:22pt;
+}
+/*목록, 수정, 삭제 버튼*/
+.board_con .popup_view dl dt a{
+	cursor: pointer;
+	padding: 20px;
+}
+.board_con .popup_view dl dt a:hover{
+	color:#2c7cdd;
+}
+/*view 이미지 크기*/
+.board_con .popup_view dl dd img{
+	width: 500px;
+	height: 600px;
+}
+/**/
+.board_con .popup_view dl dd.con_img{
+	border:none;
+}
+
+.board_con .popup_view dl span{
+	margin:0 15px ;
+	color:#666;
+}
+.board_con .popup_view dl span:after{
+	content:"|";
+	color:#aaa;
+	margin-left: 15px;
+}
+.board_con .popup_view dl span a:hover{
+	color:#2c7cdd;
 }

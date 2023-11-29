@@ -33,6 +33,7 @@
             <div class="board_update">
                 <form action="/menu/community/news/update_news" name="updateFrm" id="updateFrm" method="post" enctype="multipart/form-data">
                     <dl th:each="ndto : ${ndto}">
+                        <input type="hidden" name="nno" th:value="${ndto.nno}">
                         <dd>
                             <ul>작성자
                                 <li><input type="hidden" name="name" th:value="${ndto.name}" th:text="${ndto.name}"></li>
@@ -61,11 +62,10 @@
                                         <input type="hidden" name="file" th:value="${ndto.nfile}"/>
                                         <br><br>
                                     </th:block>
-                                    <input type="file" name="file">
+                                    <input type="file" name="file" accept="image/*">
                                 </li>
                             </ul>
                         </dd>
-                        <!--sub.css 1064~1073번 hover 색깔 추가-->
                         <dt>
                             <a onclick="updateBtn()">저장</a>
                             <a th:href="@{../news/view_news(page=${page},nno = ${ndto.nno})}">취소</a>
@@ -104,7 +104,6 @@
         var conf = confirm("수정한 내용을 저장하시겠습니까?");
         if(conf){
             alert("수정이 완료되었습니다.");
-            location.href
             updateFrm.submit();
         }else{
             return false;

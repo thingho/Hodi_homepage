@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">회원증발급시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li ><a href="./sub2_3">출입관리시스템</a></li>
+        <li ><a href="./sub2_4">영상정보시스템</a></li>
+        <li class="on"><a href="./sub2_5">회원증발급시스템</a></li>
+        <li ><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li ><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>회원증발급시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis">
+            ICMaker는 원하는 스타일로 만들 수 있는 빠르고 간편한 회원증 발급 프로그램입니다.
+        </div>
+        <div class="content_main">
+            <div class="inlineMenu" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li class="active" data-id="ICMaker">ICMaker</li>
+                    <li data-id="Card">회원증</li>
+                </ul>
+            </div>
+            <div class="tabs">
+                <div id="ICMaker" class="active">
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_5/1icm01.png" alt="ICMaker">
+                                    <h5>회원증발급시스템</h5>
+                                </div>
+                                <!-- <div class="nav">
+                                    <img src="../..//image/sub/sub2/gate_b.png" alt="게이트">
+                                    <h5>출입게이트</h5>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">ICMaker</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>[주요기능]</b></dt>
+                                    <dd>1. WIZWIG 방식의 제공 </dd>
+                                    <dd>&nbsp;&nbsp;- 사용자가 손쉽게 발급 가능</dd>
+                                    <dd>&nbsp;&nbsp;- WIZWIG 방식은 What You See Is What You Get'의 줄임말로 보이는 그대로의 <br>&nbsp;&nbsp;&nbsp;&nbsp;결과물을 얻는다는 뜻</dd>
+                                    <dd>&nbsp;&nbsp;- 복잡한 내부코드 소스에 신경 쓸 필요없이 보이는 그대로 편집이 가능한 방식을 뜻함</dd><br>
+                                    <dd>2. 실시간 인물 촬영 기능</dd>
+                                    <dd>&nbsp;&nbsp;- 증명사진이 없을 경우 실시간으로 사진출력이 가능</dd>
+                                    <dd>&nbsp;&nbsp;- 다이렉트 엑스 기반의 실시간 화면 캡쳐기능 제공</dd>
+                                    <dd>&nbsp;&nbsp;- 웹 카메라 및 디지털 카메라와 연동</dd>
+                                    <dd>&nbsp;&nbsp;- 자동 이미지 사이즈 조정 및 자르기</dd>
+                                    <dd>&nbsp;&nbsp;- 연속촬영하여 가장 잘나온 사진으로 선택</dd>
+                                    <dd>&nbsp;&nbsp;- 캡쳐된 사진은 도서관리 프로그램과 연동되어 자동으로 추가 </dd><br>
+                                    <dd>3. 발급내역조회 가능</dd>
+                                    <dd>&nbsp;&nbsp;- 기간 설정하여 발급된 내역 및 발급차수, 발급 관리자 등을 조회 할 수 있음</dd>
+                                </dl>
+                                <!-- </li>
+                                <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                        </ul>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">시스템개요</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>- 회원증발급시스템(ICMaker)는 ‘회원증 발급 프로그램’으로 기존의 틀에 박힌 회원들이 아닌 자신만의 독특한 스타일로 </br>&nbsp;&nbsp;손쉽게 직접 제작하여 발급받을 수 있는 간편하고 빠른 회원증 발급 프로그램입니다. </dd>
+                                <dd>- 자신만의 스타일로 독특한 회원증을 가지고 싶으신 분들에게 적합한 제품으로 바코드, 인물사진과 다양한 배경화면 편집이 직접 </br>&nbsp;&nbsp;가능한 국내 유일의 프로그램입니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- div class="con_area">
+                        <div class="left_area">주요특징</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>-  측면에 설치된 센서(6조)로 통행자 감지
+                                <dd>- 모터방식으로 출입문 구동
+                                <dd>- 화재, 정전시 비상 개방
+                                <dd>- 출입문(Glass Wing)에 승객이 끼었을 시 자동 열림으로 안전성 확보(Option 사항)
+                                <dd>- RF카드 리더, 지문인식 리더, 바코드 리더등과 가능</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">도입효과</div>
+                        <div class="right_area">
+                            <dl>
+                                <dt>[사용자]</dt>
+                                <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                                <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                                <dd>- PDP와 SMS 연계</dd>
+                                <dt>[관리자]</dt>
+                                <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                                <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                                <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                                <dd>- 손쉬운 관리 프로그램</dd>
+                            </dl>
+                        </div>
+                    </div> -->
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">화면구성</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub02/sub2_5/1icm02.jpg" alt="화면구성"></dd>
+                            </dl><!--
+                            <div class="all">
+                            <dl>
+                                <dt><font  color="#3366cc">➀ : 검색</font></dt>
+                                <dd>특정회원을 검색할 경우 검색필드(회원번호, 이름, 발급차수)에서 검색, 전체 검색 시 검색어를 빈칸으로 검색 버튼을 클릭하면 </br>됩니다.</dd>
+                                <dt><font  color="#3366cc">➁ : 카메라, 파일, 스캔</font></dt>
+                                <dd>사진관련 버튼으로 웹캠을 사용하는 카메라버튼과 이미지파일을 가지고 있을 경우의 이미지파일을 불러 올 수 있는 파일버튼, </br>스캐너를 사용하여 사진을 스캔하는 스캔버튼으로 구성되어 있습니다.</dd>
+                                <dt><font  color="#3366cc">➂ : 회원목록</font></dt>
+                                <dd> 검색창을 이용해 회원을 검색할 경우 회원의 정보를 보여주는 창입니다.</dd>
+                                <dt><font  color="#3366cc">➃ : 미리보기</font></dt>
+                                <dd> 검색과정으로 검색된 회원을 클릭 시 해당 회원의 회원증 출력화면을 미리 볼 수 있습니다.</dd>
+                                <dt><font  color="#3366cc">➄ : RF장치메뉴</font></dt>
+                                <dd> 발급할 카드에 RF카드일 경우 해당 RF의 값을 입력 또는 확인 할 수 있는 화면을 오픈합니다.</dd>
+                                <dt><font  color="#3366cc">➅ : 회원증발급</font></dt>
+                                <dd>➂의 회원목록에서 검색된 회원 중 회원증을 발급할 회원을 선택한 후 회원증 발급 버튼을 클릭 시 선택된 회원의 회원증이 </br>발급됩니다.</dd>
+                            </dl>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Card" >
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_5/2mcard01.png" alt="ICMaker">
+                                    <h5>RFID (HD-R100C)</h5>
+                                </div>
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_5/2mcard02.png" alt="ICMaker">
+                                    <h5>PVC(HD-P50C)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">회원증카드</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>1) RFID (HD-R100C)</b></dt>
+                                    <dd>회원증 RFID 카드는 내장된 RFID TAG에 이용자 정보를 저장하여 </dd>
+                                    <dd>사용. 견고한 외형으로 카드 소지 및 손상이 방지됩니다.</dd>
+                                    <dd style="margin-top:15px;"><a href="http://www.g2b.go.kr:8092/sm/pp/goods/SMPPGoodsDtlInfo.do?cntrctGoodsMngNo=002061279003&exmalNo=&brnchoffcCd=&mnThngCtgryCd=&serviceExmalYn=&shopCntrctSn=&srchFd=goodsIdNo&srchMthSe=S&kwd=21774985" target="_blank" class="btn btn_blue">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">21774985</font></span></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><b>2) PVC(HD-P50C)</b></dt>
+                                    <dd>카드프린터를 통해 이용자 정보(사진 및 바코드) 를 출력하며 </dd>
+                                    <dd>도서관이 지정한 디자인을 제공 합니다.</dd>
+                                    <!-- <dd style="margin-top:15px;"><a href="http://www.g2b.go.kr:8092/sm/pp/goods/SMPPGoodsDtlInfo.do?cntrctGoodsMngNo=002061279003&exmalNo=&brnchoffcCd=&mnThngCtgryCd=&serviceExmalYn=&shopCntrctSn=&srchFd=goodsIdNo&srchMthSe=S&kwd=21774985" target="_blank" class="btn btn_blue">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">21774985</font></span></dd> -->
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="img_border" style="margin-top:40px" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_5/3machine01.png" alt="Primacy">
+                                    <h5>Primacy</h5>
+                                </div>
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_5/3machine02.png" alt="ICMaker">
+                                    <h5>Zenius</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" style="margin-top:40px" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">회원증발급기</span>
+                            <li>
+                                <dl>
+                                    <dt><b>1) Primacy</b></dt>
+                                    <dd>[일반적인 특징] </dd>
+                                    <dd> &nbsp;&nbsp;· 단면 또는 양면 인쇄 모듈 </dd>
+                                    <dd> &nbsp;&nbsp;&nbsp; 전폭(edge-to-edge)인쇄</dd>
+                                    <dd> &nbsp;&nbsp;· 염료 승화 및 단색열전사 </dd>
+                                    <dd> &nbsp;&nbsp;· 300dpi 인쇄 헤드 </dd>
+                                    <dd> &nbsp;&nbsp;· 16MB 메모리(RAM) </dd>
+                                    <dd>[인쇄속도] </dd>
+                                    <dd> &nbsp;&nbsp;· YMCKO 190 카드/시 </dd>
+                                    <dd> &nbsp;&nbsp;· YMCKO-K 140 카드/시 </dd>
+                                    <dd> &nbsp;&nbsp;· 단색 600 카드/시 </dd>
+                                    <dd>[리본타입]</dd>
+                                    <dd> &nbsp;&nbsp;· YMCKO(칼라) 300매</dd>
+                                    <dd>[치수 및 중량]</dd>
+                                    <dd> &nbsp;&nbsp;· 치수 (H x W x L)  : 247 x 205 x 381 mm</dd>
+                                    <dd> &nbsp;&nbsp;· 중량: 4.02 kg</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><b>2) Zenius</b></dt>
+                                    <dd>[일반적인 특징] </dd>
+                                    <dd> &nbsp;&nbsp;· 단면 인쇄 모듈 </dd>
+                                    <dd> &nbsp;&nbsp;&nbsp; 전폭(edge-to-edge)인쇄</dd>
+                                    <dd> &nbsp;&nbsp;· 염료 승화 및 단색열전사 </dd>
+                                    <dd> &nbsp;&nbsp;· 300dpi 인쇄 헤드 </dd>
+                                    <dd> &nbsp;&nbsp;· 16MB 메모리(RAM) </dd>
+                                    <dd>[인쇄속도] </dd>
+                                    <dd> &nbsp;&nbsp;· YMCKO 120~150장/시간 </dd>
+                                    <dd> &nbsp;&nbsp;· 단색 400~500장/시간 </dd>
+                                    <dd>[리본타입]</dd>
+                                    <dd> &nbsp;&nbsp;· YMCKO(칼라) 300매</dd>
+                                    <dd>[치수 및 중량]</dd>
+                                    <dd> &nbsp;&nbsp;· 치수 (H x W x L) : 195 x 205 x 310 mm</dd>
+                                    <dd> &nbsp;&nbsp;· 중량: 3.3 kg</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- <div class="con_area">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub3/gate_b.png" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

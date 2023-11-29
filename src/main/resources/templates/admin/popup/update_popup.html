@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="../../../index">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >커뮤니티</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../sub01/sub1.php">회사소개</a></li>
+                        <li><a href="../sub02/sub1_1.php">도서관사업</a></li>
+                        <li><a href="../sub03/sub1_1.php">전력사업</a></li>
+                        <li><a href="../..//menu//community/news/list_news">커뮤니티</a></li>
+                    </ul>
+                </li>
+                <li class="dep2"><a href='javascript:void(0);' class="cur" >뉴스글 수정</a></li>
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>POPUP 수정</strong><div class="bottom_border"></div></div>
+        <div class="board_con">
+            <div class="board_update">
+                <form action="/admin/popup/update_popup" name="updateFrm" id="updateFrm" method="post" enctype="multipart/form-data">
+                    <dl th:each="pdto : ${pdto}">
+                        <input type="hidden" name="pno" th:value="${pdto.pno}">
+                        <dd>
+                            <ul>작성자
+                                <li><input type="hidden" name="name" th:value="${pdto.name}" th:text="${pdto.name}"></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>POPUP 상태
+                                <li>
+                                    <select name="pshow">
+                                        <th:block th:if="${pdto.pshow == 'Y'}">
+                                            <option value="Y" selected>활성화</option>
+                                            <option value="N">비활성화</option>
+                                        </th:block>
+                                        <th:block th:if="${pdto.pshow == 'N'}">
+                                            <option value="Y">활성화</option>
+                                            <option value="N" selected>비활성화</option>
+                                        </th:block>
+                                    </select>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>제목
+                                <li><input type="text" name="ptitle" id="ptitle" placeholder="제목을 입력해주세요." th:value="${pdto.ptitle}"></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>내용
+                                <li><textarea name="pcontent" id="pcontent" placeholder="내용을 입력해주세요." th:text="${pdto.pcontent}"></textarea></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul>사진
+                                <li>
+                                    <th:block th:if="${pdto.pfile != null}" >
+                                        <img th:src="@{../../../image/popup/}+${pdto.pfile}" style="width: 150px;">
+                                        <input type="hidden" name="file" th:value="${pdto.pfile}"/>
+                                        <br><br>
+                                    </th:block>
+                                    <input type="file" name="file">
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>
+                            <a onclick="updateBtn()">저장</a>
+                            <a th:href="@{../popup/view_popup(page=${page},pno = ${pdto.pno})}">취소</a>
+                        </dt>
+                    </dl>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+<script>
+    if("[[${session.sessionId}]]" == ""){
+        alert("잘못된 접근입니다.");
+        location.href="../../../index";
+    }
+
+    function updateBtn(){
+        if("[[${session.sessionId}]]" != "admin"){
+            alert("관리자만 수정이 가능합니다.");
+            location.href="../../../index";
+        }
+        if ($("#ptitle").val() == ""){
+            alert("제목을 입력해주세요.");
+            $("#ntitle").focus();
+            return false;
+        }
+
+        var conf = confirm("수정한 내용을 저장하시겠습니까?");
+        if(conf){
+            alert("수정이 완료되었습니다.");
+            updateFrm.submit();
+        }else{
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

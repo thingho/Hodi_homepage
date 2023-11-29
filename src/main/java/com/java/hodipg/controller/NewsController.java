@@ -70,7 +70,7 @@ public class NewsController {
             String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd_HHmmss"));
             filename = time+"_"+original;
             /*String uploadurl = "c://workspace/images/";*/
-            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image\\news\\";
+            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\uploadfiles\\news\\";
             File f = new File(uploadurl + filename);
             file.transferTo(f);
         }
@@ -103,11 +103,11 @@ public class NewsController {
             String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd_HHmmss"));
             filename = time+"_"+original;
             /*String uploadurl = "c://workspace/images/";*/
-            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\image\\news\\";
+            String uploadurl = System.getProperty("user.dir") + "\\src\\main\\uploadfiles\\news\\";
             File f = new File(uploadurl + filename);
             file.transferTo(f);
+            ndto.setNfile(filename);
         }
-        ndto.setNfile(filename);
         newsSerivce.updateOne(ndto);
         return "redirect:list_news";
     }

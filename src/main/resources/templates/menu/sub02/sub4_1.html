@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">보안솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">DB암호화</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub4_1">DB암호화</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+
+<div class="main_wrap">
+    <div class="content" >
+        <div class="content_title"><strong>DB암호화</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            중요 Data Column 단위로 암호화하고 암호화된 Column에 대한 Auding Log를 암호화하여 남기며 유출을 원천 봉쇄하는 최종 보안 툴
+        </div>
+        <div class="content_main">
+
+            <!-- <div class="inlineMenu">
+                <ul>
+                    <li class="active" data-id="gate">DB암호화</li>
+                    <li data-id="program">CubeOne Plug-in(도서관)</li>
+                </ul>
+            </div> -->
+            <div class="tabs">
+                <!-- 게이트 -->
+                <div id="gate" class="active">
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub4_1/cube01.png" alt="큐브원">
+                                    <h5>큐브원</h5>
+                                </div>
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub4_1/cube01a.png" alt="큐브원">
+                                    <h5>CubeOne</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">CubeOne Plug-in(도서관)</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>[주요기능]</b></dt>
+                                    <dd>- Plug-In 지원DBMS : Oracle, MS-SQL, DB2, Informix, Tibero, TERA 지원</dd>
+                                    <dd>- 지원형식 : Plug-In, API, Hybrid</dd>
+                                    <dd>- 동일한 암호 데이터에 대하여 Plug-In과 API 동시 처리</dd>
+                                    <dd>- 알고리즘 : ARIA(KS표준,정부표준), AES, SHA를 포함한 다양한 알고리즘 지원 및</br>&nbsp;&nbsp;부분 암호화 지원</dd>
+                                    <dd>- 키 관리 : DB서버에는 인가되지 않은 접근으로 인해 유출되지 않도록 복호키를 파일이나</br> &nbsp;&nbsp테이블에 저장하지 않음</dd>
+                                    <dd>- GS인증 및 국가 암호화 모듈 검증 제품</dd>
+                                    <dd>- Index도 반드시 암호화 되어야 하며, 암호화된 Index를 이용한 색인검색이 가능</dd>
+                                    <dd>- PK 또는 Unique Key 컬럼을 암호화.</dd>
+                                </dl>
+                            </li>
+                            <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span>
+							나라장터 물품식별번호</span></li>
+                            <li><font color="red">22254509, 22255075, 22255076, 22255077, 22255078, 22255079</font></span></li></br>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">시스템개요</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><strong>CubeOne Plug-in[도서관] DB암호화</strong>는 중요정보(개인정보)가 저장된 대용량 DB에 적용하기에 알맞은 매우 독창적인 구조를 가지고 있습니다.
+                                <dd>이러한 기술은 NEP(우수신제품인증) 및 국내외 특허로 그 독창성과 기술력이 입증 된 바 있습니다.
+                                <dd>또한 많은 대형 시스템 구축사업에서 비교할 수 없는 우수성이 입증 되고 있으며, 고객들은 매우 만족스러워 하고 있습니다. </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">주요특징</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>1. 색인 검색을 지원하는 대용량 DB 전문 암호화 솔루션</dd>
+                                <dd>2. DBMS 보안 무결성</dd>
+                                <dd>3. ULL 데이터 및 CHAR, VARCHAR2, NUMBER, DATE, INT, FLOAT,  LONG, LOB(스캔문서,이미지,일반문서 등)</br>&nbsp;&nbsp;&nbsp; Type의 데이터(2MB 이상)를 암호화</dd>
+                                <dd>4.암호화로 인한 Application의 변경이 없음</dd>
+                                <dd>5.암호화된 컬럼을 포함하는 Join 검색에 제한이 없음</dd>
+                                <dd>6. 동일한 데이터의 암.복호 부하를 분산할 수 있도록 Application서버에 설치하는 색인검색이 가능한 API 모듈을 함께 제공</dd>
+                                <dd>7. 접근제어 정책 변경 시 Active Seesion에 대하여도 즉시 적용 가능</dd>
+                                <dd>8. DB사용자/ IP 주소/ MAC 주소/ 시스템명 및 Application별 및 시간대 별로 조건을 조합하여 접근제어 정책을 설정 가능</dd>
+                                <dd>9. Application별 접근제어 시 Application 명을 변경하여도 차단이 가능</dd>
+                                <dd>10. Constraint  정보나 Dependency 정보가 자동으로 유지</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">보안요건</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>- DB암호화는 최종 보안으로서 ‘안전한 알고리즘’, ‘권한통제’, ‘키 기밀성’을 핵심으로 하는 DB내 중요정보 (개인정보 등)를 암호화하는</br>&nbsp;&nbsp; 가장 강력한 보안 솔루션입니다. </dd>
+                                <img src="../..//image/sub/sub2/cube03.jpg" alt="3대보안요건"></dd>
+                                <dd>- 테이블상의 데이터를 암호화 하는데 사용할 수 있는 ‘안전한 알고리즘’은 ‘방통위의 기준해설서에 정의되어있으며,</br>&nbsp;&nbsp; 128bit ~256bit 의 키 길이를 가지는 비밀키 기반의 블록 알고리즘입니다. </dd>
+                                <dd>- 인덱스도 반드시 암호화 되어야 하며 이를 암호화 하는데 사용할 수 있는 알고리즘에 대해서는 국정원의</br>&nbsp;&nbsp; ‘DB 암호화제품 보안기능 요구서’에서 부분암호화 또는 일방향 기반의 알고리즘을 사용할 수 있도록 하고 있습니다. </dd></dl>
+                        </div>
+                    </div>
+                    <!-- div class="con_area">
+                        <div class="left_area">도입효과</div>
+                        <div class="right_area">
+                            <dl>
+                                <dt>[사용자]</dt>
+                                <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                                <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                                <dd>- PDP와 SMS 연계</dd>
+                                <dt>[관리자]</dt>
+                                <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                                <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                                <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                                <dd>- 손쉬운 관리 프로그램</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">화면구성</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/sm03.jpg" alt="화면구성"></dd>
+                            </dl>
+                        </div>
+                    </div> -->
+                    <!-- <div class="con_area">
+                        <div class="left_area">구성흐름도1</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/gate_b.png" alt="구성흐름도"></dd>
+                            </dl>S
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- CubeOne Plug-in(도서관) -->
+                <div id="program" >
+
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub4_1/cube01.png" alt="큐브원">
+                                    <h5>CubeOne Plug-in(도서관)</h5>
+                                </div>
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub4_1/cube01a.png" alt="큐브원">
+                                    <h5>CubeOne</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">CubeOne Plug-in(도서관)
+							</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>[주요기능]</b></dt>
+                                    <dd>- Plug-In 지원DBMS : Oracle, MS-SQL, DB2, Informix, Tibero, TERA 지원</dd>
+                                    <dd>- 지원형식 : Plug-In, API, Hybrid</dd>
+                                    <dd>- 동일한 암호 데이터에 대하여 Plug-In과 API 동시 처리</dd>
+                                    <dd>- 알고리즘 : ARIA(KS표준,정부표준), AES, SHA를 포함한 다양한 알고리즘 </br>&nbsp;&nbsp;지원 및 부분 암호화 지원</dd>
+                                    <dd>- 키 관리 : DB서버에는 인가되지 않은 접근으로 인해 유출되지 않도록 </br>&nbsp;&nbsp;복호키를 파일이나 테이블에 저장하지 않음</dd>
+                                    <dd>- GS인증 및 국가 암호화 모듈 검증 제품</dd>
+                                    <dd>- Index도 반드시 암호화 되어야 하며, 암호화된 Index를 이용한 색인검색이 </br>&nbsp;&nbsp;가능</dd>
+                                    <dd>- PK 또는 Unique Key 컬럼을 암호화.</dd>
+                                </dl>
+                                <!-- </li>
+                                <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                        </ul>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">시스템개요</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>- DB암호화는 최종 보안으로서 ‘안전한 알고리즘’, ‘권한통제’, ‘키 기밀성’을 핵심으로 하는 DB내 중요정보 (개인</br>&nbsp;&nbsp;정보 등)를 암호화하는 가장 강력한 보안 솔루션입니다. </dd>
+                                <img src="../..//image/sub/sub02/sub4_1/cube03.jpg" alt="3대보안요건"></dd>
+                                <dd>- 테이블상의 데이터를 암호화 하는데 사용할 수 있는 ‘안전한 알고리즘’은 ‘방통위의 기준해설서에 정의되어 </br>&nbsp;&nbsp;있으며, 128bit ~256bit 의 키 길이를 가지는 비밀키 기반의 블록 알고리즘입니다. </dd>
+                                <dd>- 인덱스도 반드시 암호화 되어야 하며 이를 암호화 하는데 사용할 수 있는 알고리즘에 대해서는 국정원의 ‘DB</br>&nbsp;&nbsp;암호화제품 보안기능 요구서’에서 부분암호화 또는 일방향 기반의 알고리즘을 사용할 수 있도록 하고 있습니다. </dd></dl>
+                        </div>
+                    </div>
+                    <!--div class="con_area">
+                        <div class="left_area">주요특징</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>-  측면에 설치된 센서(6조)로 통행자 감지
+                                <dd>- 모터방식으로 출입문 구동
+                                <dd>- 화재, 정전시 비상 개방
+                                <dd>- 출입문(Glass Wing)에 승객이 끼었을 시 자동 열림으로 안전성 확보(Option 사항)
+                                <dd>- RF카드 리더, 지문인식 리더, 바코드 리더등과 가능</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">도입효과</div>
+                        <div class="right_area">
+                            <dl>
+                                <dt>[사용자]</dt>
+                                <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                                <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                                <dd>- PDP와 SMS 연계</dd>
+                                <dt>[관리자]</dt>
+                                <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                                <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                                <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                                <dd>- 손쉬운 관리 프로그램</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">화면구성</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/sm03.jpg" alt="화면구성"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">구성흐름도</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/gate_b.png" alt="구성흐름도"></dd>
+                            </dl>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

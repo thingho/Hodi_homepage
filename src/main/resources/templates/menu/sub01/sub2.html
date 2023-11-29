@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >회사소개</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);'  class="cur">연혁</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="../../sub1">인사말</a></li>
+                        <li><a href="../../sub2">연혁</a></li>
+                        <li><a href="../../sub3">일반현황</a></li>
+                        <li><a href="../../sub4">사업분야</a></li>
+                        <li><a href="../../sub5">찾아오시는길</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div><div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>연혁</strong><div class="bottom_border"></div></div>
+        <div class="content_main">
+            <div class="tabs">
+                <div id="info" class="active">
+                    <div class="histList">
+                        <ul>
+                            <li>
+                                <div class="right summary" >
+
+                                    <ul class="textList">
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2020</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>서울에너지공사-호디, 스마트에너지 신기술 개발 업무협약 체결  </em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>제주 온라인 전력수요예측 시스템 개발사업 </em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>고려대, 연세대, 한림대, 동국대, 동의대 등 대학교 좌석관리시스템 개발  </em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2019</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>단계별 부하제어 기반의 Fast DR자원 운영시스템 및 방법 특허등록</em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>좌석관리시스템 키오스크 디자인 상표 등록</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2018</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em> 2018.04   에너지기술평가위원회 신재생에너지 변동성 대응을 위한 Fast DR 시스템 개발 (실증)</em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em> 데이터 관리 소프트웨어 개발 및 제작 ISO 인증 획득</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2017</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>전력거래소 나주 온라인 수요예측 개발(S/W)  완료</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2016</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>전력거래소 실적분석시스템 개발(S/W)  완료</em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>좌석예약시스템 GS  인증 획득</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2015</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em> 2015.05  전력거래소 온라인 수요예측 기반시스템 구축(S/W)  완료</em>
+                                            </div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>서울시 대표도서관 책이음 서비스 지역센터구축</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2011</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>국립중앙도서관  KOLASIII (통합도서서비스)구축  전라남도, 경기도지역</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2009</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2009.05  정보통신공사업면허취득</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2008</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2008.04 벤처기업 인증, 유럽공동개발사업진행 (Voice XML)</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2007</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2007.04  기술혁신 중소기업(INNO-Biz) 인증서 획득</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2006</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2006.10  2006.10  호디 기업부설 연구소(데이터베이스 연구소) 설립</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2005</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2005.05  기업은행,기술신용보증기금 우수중소기업 선정</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+
+                                        <li class="active">
+                                            <div class="year" data-aos-offset="50" data-aos="fade-up">2004</div>
+                                            <div class="text" data-aos-offset="50" data-aos="fade-up">
+                                                <em>2004.07  창업보육기술개발사업 (TBI 업체 선정)</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- <div class="left">
+                                    <ul class="textList">
+                                        <li class="active">
+                                            <div class="year">2015</div>
+                                            <div class="text">
+                                                <em>2015.12 전력거래소 전력수요 분석시스템 구축 </em>
+                                            </div>
+                                            <div class="text">
+                                                <em>2015.10 서울도서관 책이음서비스 지역센터 구축 </em>
+                                            </div>
+                                            <div class="text">
+                                                <em>2015.09 한국 전력거래소 온라인 수요예측 기반시스템 개발 </em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="year">2014</div>
+                                            <div class="text">
+                                                <em>2014.12 고양시 삼송도서관 좌석발급시스템 및 알리미시스템 구축</em>
+                                            </div>
+                                            <div class="text">
+                                                <em>2014.10 2014년 공공도서관 통합도서서비스 확대구축 및 시스템 개선</em>
+                                            </div>
+                                            <div class="mark"><div class="dot"><em></em><span></span></div></div><div class="line" style="height: 0px;"></div>
+                                        </li>
+                                    </ul> -->
+                                <!-- <div class="img"><img src="/backoffice/files/3aeb39b8-ea30-4eb9-946c-2daa4c297489190520_15181500.jpg" alt="썸네일"></div> -->
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <img src="../../image/sub/2history.jpg" alt=""> -->
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

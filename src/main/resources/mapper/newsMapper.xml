@@ -13,7 +13,7 @@
         <if test="category == 'ncontent'">
             where ncontent like concat('%',#{word},'%')
         </if>
-        order by nno
+        order by nno desc
         limit #{startRow}, 5
     </select>
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header_admin.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+                <li class="home"><a href="../../../admin">HOME</a></li>
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >관리자 페이지</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../sub01/sub1.php">회사소개</a></li>
+                        <li><a href="../sub02/sub1_1.php">도서관사업</a></li>
+                        <li><a href="../sub03/sub1_1.php">전력사업</a></li>
+                        <li><a href="../..//menu//community/news/list_news">커뮤니티</a></li>
+                    </ul>
+                </li>
+                <li class="dep2"><a href='javascript:void(0);' class="cur" >POPUP 목록</a></li>
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>POPUP 목록</strong><div class="bottom_border"></div></div>
+        <div class="board_con">
+            <div class="popup_view" th:each="pdto : ${pdto}">
+                <dl>
+                    <dt class="title" th:text="${pdto.ptitle}"></dt>
+                    <dd>
+                        NO.<span th:text="${pdto.pno}"></span>
+                        작성일<span th:text="${pdto.pdate}"></span>
+                        작성자<span th:text="${pdto.name}"></span>
+                        <th:block th:if="${pdto.pshow == 'Y'}">POPUP<span style="color: blue">활성화</span></th:block>
+                        <th:block th:if="${pdto.pshow == 'N'}">POPUP<span style="color: red">비활성화</span></th:block>
+                    </dd>
+                    <dd th:if="${pdto.pfile != null}">
+                        <!--<img th:src="${ndto.nfile}">-->
+                        <img th:src="@{../../../image/popup/}+${pdto.pfile}">
+                    </dd>
+                    <th:block th:if="${pdto.pcontent != null}">
+                        <dd class="content" th:text="${pdto.pcontent}"></dd>
+                    </th:block>
+                    <dt>
+                        <a th:href="@{../popup/list_popup(page=${page},category=${category},word=${word})}">목록</a>
+                        <a th:if="${session.sessionId == 'admin' || session.sessionName == pdto.name}"  th:pno="${pdto.pno}" th:onclick="updateBtn(this.getAttribute('pno'))">수정</a>
+                        <a th:if="${session.sessionId == 'admin' || session.sessionName == pdto.name}" th:pno="${pdto.pno}" th:onclick="deleteBtn(this.getAttribute('pno'))">삭제</a>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    function updateBtn(pno){
+        var conf = confirm("POPUP을 수정하시겠습니까?");
+        if(conf){
+            location.href="../popup/update_popup?pno="+pno;
+        }
+    }
+    function deleteBtn(pno){
+        var conf = confirm("POPUP을 삭제하시겠습니까?");
+        if(conf){
+            alert("삭제가 왼료되었습니다.");
+            location.href="../popup/delete_popup?pno="+pno;
+        }
+    }
+</script>
+
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

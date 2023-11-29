@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">도서관솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">출입관리시스템</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub2_1">열람실좌석발급시스템</a></li>
+                        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+                        <li ><a href="./sub2_3">출입관리시스템</a></li>
+                        <li ><a href="./sub2_4">영상정보시스템</a></li>
+                        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+                        <li ><a href="./sub2_6">디지털전자신문</a></li>
+                        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+                        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+                        <li ><a href="./sub2_9">공간관리시스템</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li ><a href="./sub2_1">열람실좌석발급시스템</a></li>
+        <li ><a href="./sub2_2">디지털자료실예약관리시스템</a></li>
+        <li class="on"><a href="./sub2_3">출입관리시스템</a></li>
+        <li ><a href="./sub2_4">영상정보시스템</a></li>
+        <li ><a href="./sub2_5">회원증발급시스템</a></li>
+        <li ><a href="./sub2_6">디지털전자신문</a></li>
+        <li ><a href="./sub2_7">강좌관리시스템</a></li>
+        <li ><a href="./sub2_8">전자책대출반납시스템</a></li>
+        <li ><a href="./sub2_9">공간관리시스템</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>출입관리시스템</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            출입관리시스템은 게이트와의 연결을 통하여 실시간으로 출입한 회원 및 방문자의 정보를 관리자가 쉽게 분석 및 제어할 수 있는 시스템입니다.
+
+        </div>
+        <div class="content_main">
+
+            <div class="inlineMenu">
+                <ul>
+                    <li class="active" data-id="gate">출입게이트</li>
+                    <li data-id="program">게이트프로그램</li>
+                </ul>
+            </div>
+            <div class="tabs">
+                <!-- 게이트 -->
+                <div id="gate" class="active">
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_3/gate_a.png" alt="출입게이트">
+                                    <h5>출입게이트</h5>
+                                </div>
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_3/gate01.png" alt="GateManager">
+                                    <h5>GateManager</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">SpeedGate</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>[주요기능]</b></dt>
+                                    <dd>1. 가격대비 성능 전세계적으로 가장 우수 입증 </dd>
+                                    <dd>2. 도서관의 다양한 매체의 광범위한 보호의 목적</dd>
+                                    <dd>3. 도서분실방지시스템과 안정적인 운영 </dd>
+                                    <dd>4. 시각적으로 거부감이 없는 디자인 </dd>
+                                    <dd>5. 스틸바 및 우레탄바 선택 가능 </dd>
+                                    <dd>6. 작동시 소음이 없고 부드러운 작동을 제공</dd>
+                                    <dd>7. 뛰어난 내구성으로 고장율이 적음</dd>
+                                </dl>
+                                <!-- </li>
+                                <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                        </ul>
+                    </div><br><br><br><br><br><br>
+
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">시스템개요</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>- 게이트와의 연결을 통하여 실시간으로  출입한 회원 및 방문자의 정보를 관리자가 쉽게 분석 및 제어할 수 있는 시스템입니다.
+                                <dd>- 출입내역을 상세하게 관리함으로써 보다 상세하고 간편하게 출입자의 관리가 이루어지며, 1대의 PC에 여러대의 게이트를 <br>&nbsp;&nbsp;관리함으로써 보다 효율적인 관리가 용이합니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">주요특징</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>-  측면에 설치된 센서(6조)로 통행자 감지
+                                <dd>- 모터방식으로 출입문 구동
+                                <dd>- 화재, 정전시 비상 개방
+                                <dd>- 출입문(Glass Wing)에 승객이 끼었을 시 자동 열림으로 안전성 확보(Option 사항)
+                                <dd>- RF카드 리더, 지문인식 리더, 바코드 리더등과 가능</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- div class="con_area">
+                        <div class="left_area">도입효과</div>
+                        <div class="right_area">
+                            <dl>
+                                <dt>[사용자]</dt>
+                                <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                                <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                                <dd>- PDP와 SMS 연계</dd>
+                                <dt>[관리자]</dt>
+                                <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                                <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                                <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                                <dd>- 손쉬운 관리 프로그램</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">화면구성</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/sm03.jpg" alt="화면구성"></dd>
+                            </dl>
+                        </div>
+                    </div> -->
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">구성흐름도</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub02/sub2_3/gate_b.png" alt="구성흐름도"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 게이트프로그램 -->
+                <div id="program" >
+
+                    <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                        <div class="img_slide">
+                            <div class="img_area">
+                                <div class="nav">
+                                    <img src="../..//image/sub/sub02/sub2_3/gate01.png" alt="GateManager">
+                                    <h5>GateManager</h5>
+                                </div>
+                                <!-- <div class="nav">
+                                    <img src="../..//image/sub/sub2/gate_b.png" alt="게이트">
+                                    <h5>출입게이트</h5>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="left_slide">&lt;</div>
+                        <div class="right_slide">&gt;</div>
+                    </div>
+                    <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                        <ul>
+                            <li><span class="function_title">GateManager</span> <!-- <img src="../..//image/sub/sub2/certi_gs.gif" alt="GS 인증제품"></li> -->
+                            <li>
+                                <dl>
+                                    <dt><b>[주요기능]</b></dt>
+                                    <dd>1. 환경설정</dd>
+                                    <dd> &nbsp;&nbsp;- 게이트의 등록/수정/삭제 기능 </dd>
+                                    <dd>2. 좌석등록 및 관리 기능</dd>
+                                    <dd>&nbsp;&nbsp;- 관리자가 임의로 방문자의 출입을 관리하는 기능 (입실등록/ 퇴실 기능) </dd>
+                                    <dd>&nbsp;&nbsp;- 현재 입실한 회원 및 방문자의 목록에서 임의로 퇴실시킬 수 있는 기능  </dd>
+                                    <dd>&nbsp;&nbsp;- 오늘 현재까지의 퇴실한 회원 및 방문자의 목록  </dd>
+                                    <dd>&nbsp;&nbsp;- 출입금지자 등록/수정/삭제 기능</dd>
+                                    <dd>3. 이용자검색
+                                    <dd>&nbsp;&nbsp;- 이용자 출입내역 검색기능 (이름, 학번, 기간) </dd>
+                                    <dd>4.통계 </dd>
+                                    <dd>&nbsp;&nbsp;- 금일시간별, 주간별, 월간별 등 다양한 시간별 통계</dd>
+                                    <dd>&nbsp;&nbsp;- 기능과 게이트별, 개인별, 연령별, 성별, 학번/학년별, 학과별 통계</dd>
+                                </dl>
+                                <!-- </li>
+                                <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                        </ul>
+                    </div><br>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">시스템개요</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>- 출입통제프로그램(GateManager)는 게이트를 통해 출입한 회원 및 방문자의 정보를 관리자가 쉽게 분석 및 제어할 수 있는 <br>&nbsp;&nbsp;시스템입니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">주요특징</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd>a. 1대의 PC에 여러대의 GATE를 관리</dd>
+                                <dd>b. 회원DB와의 연동으로 출입자의 상세한 정보를 쉽게 파악 </dd>
+                                <dd>c. 방문자의 출입을 직접 관리</dd>
+                                <dd>d. 출입금지자를 관리자가 등록,수정,삭제 </dd>
+                                <dd>e. 출입내역을 방문자 출입내역, 입실, 퇴실 등으로 상세하게 관리</dd>
+                                <dd>f. 검색 기능을 통해 특정 사용자의 기간내 출입내역을 검색 </dd>
+                                <dd>g. 통계는 금일시간별, 주간별, 월간별, 게이트별, 개인별, 연령별, 성별, 학번별, 학과별 등으로 상세히 제공 </dd>
+                                <dd>h. Gate와 연결을 통해 실시간으로 출입관리 및 통계 확인</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- div class="con_area">
+                        <div class="left_area">도입효과</div>
+                        <div class="right_area">
+                            <dl>
+                                <dt>[사용자]</dt>
+                                <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                                <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                                <dd>- PDP와 SMS 연계</dd>
+                                <dt>[관리자]</dt>
+                                <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                                <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                                <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                                <dd>- 손쉬운 관리 프로그램</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area">
+                        <div class="left_area">화면구성</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/sm03.jpg" alt="화면구성"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                        <div class="left_area">구성흐름도</div>
+                        <div class="right_area">
+                            <dl>
+                                <dd><img src="../..//image/sub/sub2/gate_b.png" alt="구성흐름도"></dd>
+                            </dl>
+                        </div>
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

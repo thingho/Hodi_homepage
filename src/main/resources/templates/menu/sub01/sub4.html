@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back">
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >회사소개</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);'  class="cur">사업분야</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="../../sub1">인사말</a></li>
+                        <li><a href="../../sub2">연혁</a></li>
+                        <li><a href="../../sub3">일반현황</a></li>
+                        <li><a href="../../sub4">사업분야</a></li>
+                        <li><a href="../../sub5">찾아오시는길</a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+
+</div><div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>사업분야</strong><div class="bottom_border"></div></div>
+        <div class="content_main">
+            <div class="inlineMenu">
+                <ul>
+                    <li class="active" data-id="idea">사업분야</li>
+                    <li data-id="field">경영이념</li>
+                </ul>
+            </div>
+            <div class="tabs">
+                <div id="idea" style="text-align:center;" class="active" data-aos-offset="50" data-aos="fade-up">
+                    <img style="margin:0 auto;" src="../..//image/sub/sub01/sub4/busi.png" alt="사업분야">
+                </div>
+                <div id="field"  data-aos-offset="50" data-aos="fade-up">
+                    <ul class="footnote" >
+                        <li>고객의 니즈에 최우선 순위를 두는 전문기업</li>
+                        <li>The First Developer</li>
+                    </ul>
+                    <div class="idea_img_area">
+                        <img src="../..//image/sub/sub01/sub4/busi_a.png" alt="Challenge">
+                        <img src="../..//image/sub/sub01/sub4/busi_b.png" alt="Innovation">
+                        <img src="../..//image/sub/sub01/sub4/busi_c.png" alt="Trust">
+                    </div>
+                    <section class="idia_details">
+                        <dl>
+                            <dt id="idia1"><font style="color:rgb(65, 76, 94);">도전</font></dt>
+                            <dd>
+                                <ul>
+                                    <li>멈추지 않는 도전으로 실패를 뛰어 넘어 무한성장합니다.</li>
+                                    <li>맡은 분야에서 최고가 되겠다는 의지와 진취적인 사고로 끊임없이 노력하고 도전합니다.</li>
+                                    <li>조직과 자신의 가치 향상을 위해 모든 일에 열정을 가지고 신바람나게 일합니다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section class="idia_details">
+                        <dl>
+                            <dt id="idia2"><font style="color:rgb(130, 110, 99);">혁신</font></dt>
+                            <dd class="second_area">
+                                <ul>
+                                    <li>지속적인 혁신과 효율적 조직운영으로 글로벌 인재를 육성합니다.</li>
+                                    <li>꿈과 목표를 향한 강한 열정으로 새로운 미래를 만듭니다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section class="idia_details">
+                        <dl>
+                            <dt id="idia3"><font style="color:rgb(103, 103, 103);">신뢰</font></dt>
+                            <dd>
+                                <ul>
+                                    <li>서로를 존중하는 마음으로 열린 자세로 소통하고 시너지 창출을 위해 적극적으로 협력합니다.</li>
+                                    <li>사람을 존중하고, 사람 중심으로 생각합니다.</li>
+                                    <li>고객과 파트너와의 신뢰를 바탕으로 책임을 다합니다.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<!--head-->
+<head th:replace="/layout/head.html :: head"></head>
+<body>
+<!--상단 header-->
+<div th:replace="/layout/header.html :: header"></div>
+<div class="sub_back2">
+    <div class="sub_back2">
+
+    <div class="sub_title">
+        <div class="sub_wrap">
+            <ul class="main_text">
+
+                <li class="home"><a href="/">HOME</a></li>
+
+                <li class="dep1"><a href='javascript:void(0);' class="cur" >도서관사업</a>
+                    <ul class="dep1_ul" >
+                        <li class="first"><a href="../..//menu/sub01/sub1">회사소개</a></li>
+                        <li><a href="../..//menu/sub02/sub1_1">도서관사업</a></li>
+                        <li><a href="../..//menu/sub03/sub1">전력사업</a></li>
+                        <li><a href="../..//menu/community/news/list">커뮤니티</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep2"><a href='javascript:void(0);' class="cur">모바일솔루션</a>
+                    <ul class="dep2_ul" >
+                        <li class="first"><a href="./sub1_1">무인비대면솔루션</a></li>
+                        <li ><a href="./sub2_1">도서관솔루션</a></li>
+                        <li><a href="./sub3_1">모바일솔루션</a></li>
+                        <li><a href="./sub4_1">보안솔루션</a></li>
+                    </ul>
+                </li>
+
+                <li class="dep3"><a href='javascript:void(0);' class="cur">모바일앱</a>
+                    <ul class="dep3_ul" >
+                        <li class="first"><a href="./sub3_1">모바일앱</a></li>
+                        <li ><a href="./sub3_2">모바일학생증</a></li>
+                        <li ><a href="./sub3_3">모바일솔루션</a></li>
+                        <li ><a href="./sub3_4">카카오알림톡</a></li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <div class="clb"></div>
+        </div>
+    </div>
+</div>
+<div class="topmenu_deptitle">
+    <ul>
+        <li class="on"><a href="./sub3_1">모바일앱</a></li>
+        <li ><a href="./sub3_2">모바일학생증</a></li>
+        <li ><a href="./sub3_3">모바일솔루션</a></li>
+        <li ><a href="./sub3_4">카카오알림톡</a></li>
+        <!-- <li ><a href="./sub1_1.php">열람실좌석발급시스템</a></li>
+<li ><a href="./sub1_2.php">디지털자료실예약관리</a></li>
+<li ><a href="./sub1_3.php">출입관리시스템</a></li>
+<li ><a href="./sub1_4.php">영상정보시스템</a></li>
+<li ><a href="./sub1_5.php">실시간회원증발급</a></li>
+<li ><a href="./sub1_6.php">디지털전자신문</a></li>
+<li ><a href="./sub1_7.php">강좌관리시스템</a></li> -->
+    </ul>
+</div>
+
+<div class="main_wrap">
+    <div class="content">
+        <div class="content_title"><strong>모바일앱</strong><div class="bottom_border"></div></div>
+        <div class="content_synopsis" data-aos-offset="50" data-aos="fade-up">
+            스마트폰 대중화 패러다임에 발 맞추어 일반정보를 모바일웹으로 서비스하여, 구성원 및 일반인들에게 보다 쉽게 대학교의 학교정보를  접할 수 있습니다.
+        </div>
+        <div class="content_main">
+            <div class="img_border" data-aos-offset="50" data-aos="fade-up">
+                <div class="img_slide">
+                    <div class="img_area">
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_1/mapp01a.png" alt="모바일앱">
+                            <h5>모바일앱</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_1/mapp01b.jpg" alt="메인화면">
+                            <h5>메인화면</h5>
+                        </div>
+                        <div class="nav">
+                            <img src="../..//image/sub/sub02/sub3_1/mapp01c.jpg" alt="도서검색화면">
+                            <h5>도서검색화면</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="left_slide">&lt;</div>
+                <div class="right_slide">&gt;</div>
+            </div>
+            <div class="function_text" data-aos-offset="50" data-aos="fade-up">
+                <ul>
+                    <li><span class="function_title">Mobile APP</span> <!-- <img src="../..//image/sub/sub3/certi_gs.gif" alt="GS 인증제품"></li> -->
+                    <li>
+                        <dl>
+                            <dt><b>[주요기능]</b></dt>
+                            <dd>1. 스마트폰을 이용한 다양한 도서관 서비스</dd>
+                            <dd>(자료검색, 예약 및 각종 부가기능) 이용</dd>
+                            <dd>2. 언제 어디서나 서비스(Anywhere service) 이용 가능</dd>
+                            <dd>3. 모바일을 통한 더욱 강력한 유비쿼터스 사용환경 제공</dd>
+                            <dd>4. 새로운 개념의 도서관 서비스를 제공</dd>
+                            <dd>(Public 모델 → Private 모델로의 패러다임 전환)</dd>
+                            <dd>5. 모바일을 통한 이용자의 쉬운 접근 제공</dd>
+                            <dd>6. 각종 조회,  도서관 시스템과의 연동</dd>
+                            <dd>7. 다양한 연동 시스템 과의 연계 구성으로 이용자들에게 최적의 서비스</dd>
+                            <dd>8. 모바일을 통한 다양한 소식 전달</dd>
+                        </dl>
+                        <!-- </li>
+                        <li><a href="http://shopping.g2b.go.kr/"class="btn btn_blue" target="_blank">나라장터 바로가기</a> &nbsp;&nbsp;<span> 나라장터 물품식별번호 <font color="red">22058389</font></span></li> -->
+                </ul>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">시스템개요</div>
+                <div class="right_area">
+                    <dl>
+                        <dd>- 모바일 시스템은 크게 모바일학생증, 개인인증시스템, PUSH시스템으로 구성되며 각각의 시스템이 유기적으로 연계되어 있어 <br>&nbsp; 하나의 전용앱을 통해 구성원의 편의를 제공합니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">주요특징</div>
+                <div class="right_area">
+                    <dl>
+                        <dt><font  color="#3366cc">1) Push알리미</font></dt>
+                        <dd>: 다양한 공지사항 및 이용안내에 대하여 알림 메시지를 전송하고 다양한 정보전달</dd></br>
+                        <dt><font  color="#3366cc">2) 달력연계서비스</font></dt>
+                        <dd>: 달력에 이벤트로 등록하여 예정일 전에 알람을 수행함</dd></br>
+                        <dt><font  color="#3366cc">3) SMS대체서비스</font></dt>
+                        <dd>: Push알리미 및 달력연계 서비스를 이용하는 경우, SMS를 발송하지 않고 스마트 폰에 내장되어 있는 기능을 이용하여 이용자에게 <br>&nbsp;&nbsp;알려줌</dd></br>
+                    </dl>
+                </div>
+            </div>
+            <!-- div class="con_area">
+                <div class="left_area">도입효과</div>
+                <div class="right_area">
+                    <dl>
+                        <dt>[사용자]</dt>
+                        <dd>- 웹과 연계된 사용으로 실시간 도서관 좌석의 이용파악 좌석의 효율적인 이용 누구나 손쉽게 이용 가능</dd>
+                        <dd>- 좌석의 독점 방지로 인한 좌석 이용 기회의 확대</dd>
+                        <dd>- PDP와 SMS 연계</dd>
+                        <dt>[관리자]</dt>
+                        <dd>- 관리자의 업무기능 간결화 (인력감소, 시간절약)</dd>
+                        <dd>- 도서관 및 도서관 이용자의 체계적, 효율적 관리</dd>
+                        <dd>- 통계파악으로 도서관 참고자료 활용의 편의성 향상</dd>
+                        <dd>- 손쉬운 관리 프로그램</dd>
+                    </dl>
+                </div>
+            </div> -->
+            <div class="con_area" data-aos-offset="50" data-aos="fade-up">
+                <div class="left_area">화면구성</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub02/sub3_1/mapp02a.jpg" alt="화면구성"></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- <div class="con_area">
+                <div class="left_area">구성흐름도</div>
+                <div class="right_area">
+                    <dl>
+                        <dd><img src="../..//image/sub/sub3/gate_b.png" alt="구성흐름도"></dd>
+                    </dl>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
+<!--하단 footer-->
+<div th:replace="/layout/footer.html :: footer"></div>
+</body>
+</html>
